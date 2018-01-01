@@ -6,13 +6,13 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Gravity
-email: hemangsk@gmail.com
-description: The Liberal Jekyll Theme
+title: Bruno Luz
+email: bsilva.se@gmail.com
+description: Sobre os caminhos do eu
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: hemang_kumar
-github_username:  hemangsk
+url: "http://brunoluz.com.br" # the base hostname & protocol for your site
+github_username:  bstk
+facebook_user:  brunoluz
 paginate: 5
 theme-dark: false #Set to true to change to dark website theme
 
