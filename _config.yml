@@ -8,7 +8,7 @@
 # Site settings
 title: Bruno Luz
 email: bsilva.se@gmail.com
-description: Sobre os caminhos ... Schwinn e Eu
+description: Schwinn e Eu
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://brunoluz.com.br" # the base hostname & protocol for your site
 github_username:  bstk
