@@ -20,4 +20,5 @@ Chegou janeiro, mês de féiras era hora de descermos (Schwinn (a bike) e Eu) ru
 ![alt text](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/posts/series/vale-europeu/foto-vale-europeu-00.jpg "Saída de Embu das Artes")
 
 Se v chegou até aqui, obrigado. Conituamos no próximo post.
+
 Até !
