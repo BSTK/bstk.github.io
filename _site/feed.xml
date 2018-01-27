@@ -5,13 +5,29 @@
     <description>Schwinn e Eu</description>
     <link>http://brunoluz.com.br/</link>
     <atom:link href="http://brunoluz.com.br/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Jan 2018 00:21:42 -0200</pubDate>
-    <lastBuildDate>Sat, 27 Jan 2018 00:21:42 -0200</lastBuildDate>
+    <pubDate>Sat, 27 Jan 2018 01:14:54 -0200</pubDate>
+    <lastBuildDate>Sat, 27 Jan 2018 01:14:54 -0200</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
-        <title>Vale Europeu - A viagem</title>
+        <title>#00 Vale Europeu - A viagem</title>
         <description>&lt;p&gt;Ahh o Vale, lugarzinho show da Santa Catarina, mas afinal o que é o circuito Vale Europeu ?&lt;/p&gt;
+
+&lt;p&gt;O Vale Europeu é uma região localizada no Vale do Itajaí no interior de Santa Catarina, fazendo parte dele as cidades :
+&lt;strong&gt;Apiúna, Ascurra, Benedito Novo, Doutor Pedrinho, Indaial, Pomerode, Rio dos Cedros, Rodeio e Timbó&lt;/strong&gt;
+&lt;a href=&quot;https://circuitovaleeuropeu.com.br/municipios-integrantes/&quot;&gt;Saiba mais aqui : Municípios Integrantes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;—- Imagem Vale&lt;/p&gt;
+
+&lt;p&gt;Eu conheci esse lugar a mais ou menos dois anos atrás numa reportagem que passou no &lt;a href=&quot;http://g1.globo.com/globo-reporter/noticia/2016/02/vale-europeu-e-regiao-do-brasil-campea-em-qualidade-de-vida.html&quot;&gt;globo reporter&lt;/a&gt;
+mostrando as cidades e as belezas desse lugar. Depois dessa reportagem, eu pensei : &lt;em&gt;Rapaz, tenho que conhecer esse lugar !&lt;/em&gt; e também foi nessa época que comecei a andar de bike. Logo, casou as duas coisas, pois o Vale é um dos circuitos de cicloturismo mais incluíveis do Brasil.&lt;/p&gt;
+
+&lt;p&gt;Chegou janeiro, mês de féiras era hora de descermos (Schwinn (a bike) e Eu) rumo ao sul, para a cidade de &lt;strong&gt;Timbó&lt;/strong&gt; onde inicia e termina o circuito.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/posts/series/vale-europeu/foto-vale-europeu-00.jpg&quot; alt=&quot;alt text&quot; title=&quot;Saída de Embu das Artes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Se v chegou até aqui, obrigado. Conituamos no próximo post.
+Até !&lt;/p&gt;
 </description>
         <pubDate>Fri, 26 Jan 2018 16:30:00 -0200</pubDate>
         <link>http://brunoluz.com.br/bike/2018/01/27/vale-europeu-a-viagem.html</link>
@@ -19,38 +35,6 @@
         
         
         <category>bike</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Gravity!</title>
-        <description>&lt;p&gt;Gravity is an unopinionated theme for Jekyll, the awesome static site generator.&lt;/p&gt;
-
-&lt;p&gt;Some General Instructions for Jekyll&lt;/p&gt;
-
-&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 30 Mar 2016 11:15:31 -0300</pubDate>
-        <link>http://brunoluz.com.br/jekyll/update/2016/03/30/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://brunoluz.com.br/jekyll/update/2016/03/30/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
