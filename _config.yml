@@ -15,6 +15,7 @@ github_username:  bstk
 facebook_user:  brunoluz
 paginate: 5
 theme-dark: false #Set to true to change to dark website theme
+assets_git: "https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts"
 
 gems: [jekyll-paginate, kramdown]
 # Build settings

@@ -5,9 +5,22 @@
     <description>Schwinn e Eu</description>
     <link>http://brunoluz.com.br/</link>
     <atom:link href="http://brunoluz.com.br/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 26 Jan 2018 23:21:03 -0200</pubDate>
-    <lastBuildDate>Fri, 26 Jan 2018 23:21:03 -0200</lastBuildDate>
+    <pubDate>Sat, 27 Jan 2018 00:20:23 -0200</pubDate>
+    <lastBuildDate>Sat, 27 Jan 2018 00:20:23 -0200</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Vale Europeu - A viagem</title>
+        <description>&lt;p&gt;Ahh o Vale, lugarzinho show da Santa Catarina, mas afinal o que é o circuito Vale Europeu ?&lt;/p&gt;
+</description>
+        <pubDate>Fri, 26 Jan 2018 16:30:00 -0200</pubDate>
+        <link>http://brunoluz.com.br/bike/2018/01/27/vale-europeu-a-viagem.html</link>
+        <guid isPermaLink="true">http://brunoluz.com.br/bike/2018/01/27/vale-europeu-a-viagem.html</guid>
+        
+        
+        <category>bike</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Gravity!</title>
@@ -38,67 +51,6 @@
         <category>jekyll</category>
         
         <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Long Longer and more Longer titles look cool too!!</title>
-        <description>&lt;p&gt;“Could I be anymore pulling ?”&lt;/p&gt;
-
-&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Mar 2016 11:15:31 -0300</pubDate>
-        <link>http://brunoluz.com.br/science/2016/03/30/science0.html</link>
-        <guid isPermaLink="true">http://brunoluz.com.br/science/2016/03/30/science0.html</guid>
-        
-        
-        <category>science</category>
-        
-      </item>
-    
-      <item>
-        <title>Science of Gravity</title>
-        <description>&lt;p&gt;“Could I be anymore pulling ?”&lt;/p&gt;
-
-&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Mar 2016 11:15:31 -0300</pubDate>
-        <link>http://brunoluz.com.br/science/2016/03/30/science.html</link>
-        <guid isPermaLink="true">http://brunoluz.com.br/science/2016/03/30/science.html</guid>
-        
-        
-        <category>science</category>
-        
-      </item>
-    
-      <item>
-        <title>Design Stories : Gravity</title>
-        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-
-&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Mar 2016 11:15:31 -0300</pubDate>
-        <link>http://brunoluz.com.br/design/science/life/2016/03/30/design-stories.html</link>
-        <guid isPermaLink="true">http://brunoluz.com.br/design/science/life/2016/03/30/design-stories.html</guid>
-        
-        
-        <category>design</category>
-        
-        <category>science</category>
-        
-        <category>life</category>
         
       </item>
     
