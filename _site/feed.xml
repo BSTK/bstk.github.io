@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bruno Luz</title>
-    <description>Sobre os caminhos do eu</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Jan 2018 13:59:07 -0200</pubDate>
-    <lastBuildDate>Mon, 01 Jan 2018 13:59:07 -0200</lastBuildDate>
-    <generator>Jekyll v3.6.2</generator>
+    <description>Schwinn e Eu</description>
+    <link>http://brunoluz.com.br/</link>
+    <atom:link href="http://brunoluz.com.br/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 26 Jan 2018 23:21:03 -0200</pubDate>
+    <lastBuildDate>Fri, 26 Jan 2018 23:21:03 -0200</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
     
       <item>
         <title>Welcome to Gravity!</title>
@@ -31,8 +31,8 @@
 
 </description>
         <pubDate>Wed, 30 Mar 2016 11:15:31 -0300</pubDate>
-        <link>http://localhost:4000/jekyll/update/2016/03/30/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2016/03/30/welcome-to-jekyll.html</guid>
+        <link>http://brunoluz.com.br/jekyll/update/2016/03/30/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://brunoluz.com.br/jekyll/update/2016/03/30/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
@@ -52,8 +52,8 @@
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Mar 2016 11:15:31 -0300</pubDate>
-        <link>http://localhost:4000/science/2016/03/30/science0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/science/2016/03/30/science0.html</guid>
+        <link>http://brunoluz.com.br/science/2016/03/30/science0.html</link>
+        <guid isPermaLink="true">http://brunoluz.com.br/science/2016/03/30/science0.html</guid>
         
         
         <category>science</category>
@@ -71,8 +71,8 @@
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Mar 2016 11:15:31 -0300</pubDate>
-        <link>http://localhost:4000/science/2016/03/30/science.html</link>
-        <guid isPermaLink="true">http://localhost:4000/science/2016/03/30/science.html</guid>
+        <link>http://brunoluz.com.br/science/2016/03/30/science.html</link>
+        <guid isPermaLink="true">http://brunoluz.com.br/science/2016/03/30/science.html</guid>
         
         
         <category>science</category>
@@ -90,8 +90,8 @@
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Mar 2016 11:15:31 -0300</pubDate>
-        <link>http://localhost:4000/design/science/life/2016/03/30/design-stories.html</link>
-        <guid isPermaLink="true">http://localhost:4000/design/science/life/2016/03/30/design-stories.html</guid>
+        <link>http://brunoluz.com.br/design/science/life/2016/03/30/design-stories.html</link>
+        <guid isPermaLink="true">http://brunoluz.com.br/design/science/life/2016/03/30/design-stories.html</guid>
         
         
         <category>design</category>
