@@ -20,6 +20,6 @@ O espaço é gratuito, aproveite a estadia e caso *você encontre algum erro de 
 Achou legal o conteúdo, ótimo, bora trocar idéia
 
 <span>
-    <a href="mailto:bsilva.se@gmail.com">bsilva.se@gmail.com</a>
+    <a href="mailto:bsilva.se@gmail.com">bsilva.se@gmail.com</a> <br />
     <a href="https://www.facebook.com/kuiiz.brunoluz" target="_blank">Mande um alô !</a>
 </span>
