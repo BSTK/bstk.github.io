@@ -83,5 +83,6 @@ Logo em seguida, crie os ```get's e set's``` para a classe ```Operacao```e como 
 Bom, temos algum código até aqui mas que não faz absolutamente nada por enquanto.  No próximo post estaremos incluindo alguns métodos com alguma lógica e também inciando com os testes de unidade.
 
 Se você chegou até aqui, obrigado. Continuamos no próximo post.
+
 Até {}!
 
