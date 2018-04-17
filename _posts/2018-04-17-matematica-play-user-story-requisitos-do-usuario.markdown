@@ -5,7 +5,6 @@ date:   2018-04-17 00:00:00 +0530
 categories: spring-boot
 ---
 
-## User Story - Requisitos do usuário
 
 Vamos usar o conceito de **user story (história de usuário)** para guiar o desenvolvimento do app. Se você nunca ouviu falar no termo **user story**, deixo aqui dois artigos ([O que é a User Story?](http://www.knowledge21.com.br/sobreagilidade/user-stories/o-que-e-user-story/) e [Como é a User Story?](http://www.knowledge21.com.br/sobreagilidade/user-stories/como-e-user-story/)) explicando o conceito de forma bem detalhada. Uma explicação rápida seria : **user story** é uma forma simples que busca descrever a necessidade do usuário. 
 

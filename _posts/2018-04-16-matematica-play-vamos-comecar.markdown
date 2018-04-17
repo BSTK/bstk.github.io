@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Matemática Play - Vamos começar ?"
-date:   2018-04-17 00:00:00 +0530
+date:   2018-04-16 00:00:00 +0530
 categories: spring-boot
 ---
 
