@@ -120,12 +120,12 @@ body.dark {
       color: #4d4d4d !important; }
       body.dark a.postLink:visited {
         color: #4fb24f !important;
-        border-color: #DC143C; }
+        border-color: #4fb24f; }
     body.dark a.post-title-link {
       color: #4d4d4d !important; }
       body.dark a.post-title-link:visited {
         color: #4fb24f !important;
-        border-color: #DC143C; }
+        border-color: #4fb24f; }
   body.dark blockquote {
     color: #A7A7A7;
     border-left-color: #e8e8e8; }
