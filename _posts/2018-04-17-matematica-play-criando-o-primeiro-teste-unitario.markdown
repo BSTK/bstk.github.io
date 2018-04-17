@@ -1,11 +1,3 @@
----
-layout: post
-title:  "Matemática Play - Criando o primeiro Teste Unitário"
-date:   2018-04-17 00:00:01 +0530
-categories: spring-boot
----
-
-
 Nosso enum ```Operador``` não tem nada demais, então vamos adicionar o método ```toEnum(String simbolo)``` fazendo uma primeira versão e depois refatora-lo para usar alguns recursos do **Java 8** .
 
 ```java
@@ -61,10 +53,10 @@ public class OperadorTest {
 	
 	@Test
 	public void testDeveRetornarNullPorSimboloInvalido() {
-		assertThat(Operador.toEnum("&")).isNull();
-		assertThat(Operador.toEnum("#")).isNull();
-		assertThat(Operador.toEnum("@")).isNull();
-		assertThat(Operador.toEnum("(")).isNull();
+		assertThat(Operador.toEnum2("&")).isNull();
+		assertThat(Operador.toEnum2("#")).isNull();
+		assertThat(Operador.toEnum2("@")).isNull();
+		assertThat(Operador.toEnum2("(")).isNull();
 	}
 }
 ```
@@ -84,7 +76,70 @@ Se você olhar o arquivo ```pom.xml```, verá a dependência :
 </dependency>
 ``` 
 
-As coisas começaram a ficar legais, já criamos até nosso primeiro teste unitário. No próximo post, estaremos refatorando o método ```toEnum(String simbolo)``` para poder usar os recursos do Java 8.
+As coisas começaram a ficar legais, já criamos até nosso primeiro teste unitário. 
+
+Bom é hora de refatorar, hora de melhorar nosso método ```toEnum(String simbolo)```, veja abaixo como ficou a nova versão :
+
+```java
+	public static Operador toEnum(String simbolo) {
+	    Assert.isTrue("+-*/".contains(simbolo), "O simbolo " + simbolo + " é um operador inválido");
+		return Stream.of(values())
+					.filter(o -> o.getSimbolo().equals(simbolo))
+					.findFirst()
+					.get();
+	}
+```
+
+Usamos a classe utilitária ```Assert.isTrue()``` para validar caso seja informado um caractere inválido (todos diferentes de + - * / ). Usamos também a api ```Stream``` paar filtar (**```filter(o -> o.getSimbolo().equals(simbolo))```**) na lista de enuns qual deles é correspondente ao simbolo passado por parâmetro e pegar o primeiro elemento .
+> ***`filter(o -> o.getSimbolo().equals(simbolo))`*** está fazendo a mesma coisa que fizemos com o **if** na primeira versão do método.
+
+Caso você execute o teste unitário, perceberá que o método de teste ```testDeveRetornarNullPorSimboloInvalido()``` irá falhar pois alteramos a lógica do código.
+
+> java.lang.IllegalArgumentException: O simbolo & é um operador inválid
+
+Para corrigir isso, vamos refatora-lo também, está é a nova versão :
+```java
+@Test
+public void testDeveRetornarNullPorSimboloInvalido() {
+		
+	assertThatThrownBy(() -> { Operador.toEnum("&"); })
+				.isInstanceOf(IllegalArgumentException.class).hasMessageContaining("operador inválido");
+				
+	assertThatThrownBy(() -> { Operador.toEnum("#"); })
+				.isInstanceOf(IllegalArgumentException.class).hasMessageContaining("operador inválido");
+				
+	assertThatThrownBy(() -> { Operador.toEnum("@"); })
+				.isInstanceOf(IllegalArgumentException.class).hasMessageContaining("operador inválido");
+				
+	assertThatThrownBy(() -> { Operador.toEnum("("); })
+				.isInstanceOf(IllegalArgumentException.class).hasMessageContaining("operador inválido");
+}
+```
+O que fizemos agora é validar no teste para que quando executarmos o método ```toEnum``` passando um simbolo invalido, será lançada uma exceção ```IllegalArgumentException``` contendo na mensagem de erro o trecho ```operador inválido``` .
+
+O teste irá passar, tudo voltará a funcionar mas não ficou legal. Perceba que temos muita coisa se repetindo. É hora de refatorar novamente.
+
+Veja agora como ficou retirando todo código repetido:
+
+```java
+@Test
+public void testDeveRetornarNullPorSimboloInvalido() {
+	assertThatError("&");
+	assertThatError("#");
+	assertThatError("@");
+	assertThatError("(");	
+}
+	
+	
+private void assertThatError(String simbolo) {
+	assertThatThrownBy(() -> { Operador.toEnum(simbolo); })
+				.isInstanceOf(IllegalArgumentException.class).hasMessageContaining("operador inválido");
+}
+```
+
+Criamos um novo método ```assertThatError(String simbolo)``` que isola todo o código que se repetia, passando por parâmetro o simbolo que desejamos testar.
+
+É, fizemos bastante coisa até aqui, foi um post e tanto, mas você percebeu o como é legal ir refatorando nosso código até chegar numa versão que achamos ser a melhor. Pode ser que você olhe o código como está e queira modificar algo, vai lá, siga em frente, mas lembre-se de executar os testes a cada mudança para garantir que tudo permanece funcionando.
 
 Se você chegou até aqui, obrigado. Continuamos no próximo post.
 
