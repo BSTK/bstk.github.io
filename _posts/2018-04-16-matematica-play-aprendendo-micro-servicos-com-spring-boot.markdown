@@ -28,25 +28,25 @@ Farei todo o desenvolvimento do app utilizando uma abordagem RESTFul e todo ferr
 
  - **Java (8)** : A linguagem principal no qual será escrito nosso aplicativo. Iremos usar Java na sua versão 8
  
- - **Spring Boot** : Facilita a criação de aplicativos independentes baseados no framework Spring, que você pode executar de maneira rápida e objetiva.
+ - **Spring Boot** : Para facilitar a criação de aplicativos independentes baseados no framework Spring, que você pode executar de maneira rápida e objetiva.
  
  - **RabbitMQ** : Serviço de fila (message-broker) open source escrito em Erlang que implementa o protocolo AMQP (Advanced Message Queuing Protocol).
 
  - **Eureka** : Serviço baseado em REST que é usado principalmente na nuvem da AWS para localizar serviços com o objetivo de balanceamento de carga e de servidores de camada intermediária.
  
- - **Ribbon** :  Uma biblioteca Inter Process Communication (chamadas de procedimento remoto) com balanceadores de carga de software incorporados. O modelo de uso principal envolve chamadas REST com suporte a vários esquemas de serialização.
+ - **Ribbon** : Uma biblioteca Inter Process Communication (chamadas de procedimento remoto) com balanceadores de carga de software incorporados. O modelo de uso principal envolve chamadas REST com suporte a vários esquemas de serialização.
  
  - **Zuul** : Serviço que fornece roteamento dinâmico, monitoramento, resiliência e segurança.
 
- - **JUnit** : Framework open-source criado por Erich Gamma e Kent Beck, com suporte à criação de testes automatizados na linguagem de programação Java.
+ - **JUnit** : Framework open-source para criação de testes unitários na linguagem de programação Java.
 
  - **Mockito** : Framework que irá auxilizar nos testes unitários para construção de mocks (objetos simulados).
  
- - **Cucumber** : Auxilia no desenvolvimento de testes de aceitação automatizados escritos em um estilo de desenvolvimento orientado a comportamento (BDD)
+ - **Cucumber** : Framework que nos auxiliará no desenvolvimento de testes de aceitação automatizados escritos em um estilo de desenvolvimento orientado a comportamento (BDD)
  
  - **Bootstrap** :  Framework web open source para desenvolvimento de componentes visuais  para sites e aplicações web usando HTML, CSS e JavaScript
  
- - **Heroku**: Plataforma como serviço (PaaS) que permite aos desenvolvedores criar, executar e operar aplicativos inteiramente na nuvem.
+ - **Heroku**: Plataforma como serviço (PaaS) que permite aos desenvolvedores criar, executar e operar aplicativos inteiramente na nuvem. É no Heroku que hospedo o Matemática Play.
  
 
 
