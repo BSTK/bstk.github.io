@@ -34,7 +34,7 @@ Agora que nosso método está pronto, vamos criar um teste unitário para garant
 Na pasta ```src/test/java``` crie o pacote :
 > com.kuiiz.matematicaplay.operacao.domain
 
-Em seguida, cria a classe ```OperadorTest``` que é o mesmo nome do nosso enum mas com sufixo ```Test```.
+Em seguida, crie a classe ```OperadorTest``` que é o mesmo nome do nosso enum mas com sufixo ```Test```.
 
  Vamos incluir dois métodos de testes, um para testar o caminho feliz : 
  ```void testCriaUmOperadorDeAcorComSeuSimbolo()``` 
@@ -89,16 +89,16 @@ As coisas começaram a ficar legais, já criamos até nosso primeiro teste unit�
 Bom é hora de refatorar, hora de melhorar nosso método ```toEnum(String simbolo)```, veja abaixo como ficou a nova versão :
 
 ```java
-	public static Operador toEnum(String simbolo) {
-	    Assert.isTrue("+-*/".contains(simbolo), "O simbolo " + simbolo + " é um operador inválido");
-		return Stream.of(values())
-					.filter(o -> o.getSimbolo().equals(simbolo))
-					.findFirst()
-					.get();
-	}
+public static Operador toEnum(String simbolo) {
+	Assert.isTrue("+-*/".contains(simbolo), "O simbolo " + simbolo + " é um operador inválido");
+	return Stream.of(values())
+				.filter(o -> o.getSimbolo().equals(simbolo))
+				.findFirst()
+				.get();
+}
 ```
 
-Usamos a classe utilitária ```Assert.isTrue()``` para validar caso seja informado um caractere inválido (todos diferentes de + - * / ). Usamos também a api ```Stream``` paar filtar (**```filter(o -> o.getSimbolo().equals(simbolo))```**) na lista de enuns qual deles é correspondente ao simbolo passado por parâmetro e pegar o primeiro elemento .
+Usamos a classe utilitária ```Assert.isTrue()``` para validar caso seja informado um caractere inválido (todos diferentes de + - * / ). Usamos também a api ```Stream``` para filtar (**```filter(o -> o.getSimbolo().equals(simbolo))```**) na lista de enuns qual deles é correspondente ao simbolo passado por parâmetro e pegar o primeiro elemento .
 > ***`filter(o -> o.getSimbolo().equals(simbolo))`*** está fazendo a mesma coisa que fizemos com o **if** na primeira versão do método.
 
 Caso você execute o teste unitário, perceberá que o método de teste ```testDeveRetornarNullPorSimboloInvalido()``` irá falhar pois alteramos a lógica do código.
@@ -147,7 +147,7 @@ private void assertThatError(String simbolo) {
 
 Criamos um novo método ```assertThatError(String simbolo)``` que isola todo o código que se repetia, passando por parâmetro o simbolo que desejamos testar.
 
-É, fizemos bastante coisa até aqui, foi um post e tanto, mas você percebeu o como é legal ir refatorando nosso código até chegar numa versão que achamos ser a melhor. Pode ser que você olhe o código como está e queira modificar algo, vai lá, siga em frente, mas lembre-se de executar os testes a cada mudança para garantir que tudo permanece funcionando.
+É, fizemos bastante coisa até aqui, foi um post e tanto, mas você percebeu o quanto é legal ir refatorando nosso código até chegar numa versão que achamos ser a melhor. Pode ser que você olhe o código como está e queira modificar algo, vamos lá, siga em frente, mas lembre-se de executar os testes a cada mudança para garantir que tudo permaneça funcionando.
 
 Se você chegou até aqui, obrigado. Continuamos no próximo post.
 
