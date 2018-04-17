@@ -61,10 +61,10 @@ public class OperadorTest {
 	
 	@Test
 	public void testDeveRetornarNullPorSimboloInvalido() {
-		assertThat(Operador.toEnum2("&")).isNull();
-		assertThat(Operador.toEnum2("#")).isNull();
-		assertThat(Operador.toEnum2("@")).isNull();
-		assertThat(Operador.toEnum2("(")).isNull();
+		assertThat(Operador.toEnum("&")).isNull();
+		assertThat(Operador.toEnum("#")).isNull();
+		assertThat(Operador.toEnum("@")).isNull();
+		assertThat(Operador.toEnum("(")).isNull();
 	}
 }
 ```
