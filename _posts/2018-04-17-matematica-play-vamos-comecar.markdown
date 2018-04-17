@@ -80,7 +80,6 @@ Agora acesse **http://localhost:8080/**  e você deverá ver a seguinte tela :
 Agora sim, temos um aplicativo com **Spring Boot** devidamente configurado e funcionando. Não paramos por aqui, continue seguindo a série pois temos um longo caminho pela frente.
 
 
-Se você chegou até aqui, obrigado.
-Continuamos no próximo post.
+Se você chegou até aqui, obrigado. Continuamos no próximo post.
 
 Até {}!

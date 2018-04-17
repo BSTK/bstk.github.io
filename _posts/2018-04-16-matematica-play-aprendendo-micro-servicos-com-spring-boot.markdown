@@ -49,7 +49,6 @@ Farei todo o desenvolvimento do app utilizando uma abordagem RESTFul e todo ferr
  - **Heroku**: Plataforma como serviço (PaaS) que permite aos desenvolvedores criar, executar e operar aplicativos inteiramente na nuvem. É no Heroku que hospedo o Matemática Play.
  
 
-
 E muitos outros que não estão listados aqui mas que com certeza aparecerá em algum momento.
 Se você chegou até aqui, obrigado. Continuamos no próximo post.
 
