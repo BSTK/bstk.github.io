@@ -8,15 +8,19 @@ categories: spring-boot
 
 Se você é um desenvolvedor Java assim como eu já deve ter ouvido falar em **Spring Boot** e também **micro-serviços** e com certeza já deve ter mexido muito com o ecossistema **Spring**.
 
+..
+
 ## O que é o Matemática Play
 
-**Matemática Play** é um aplicativo que estou desenvolvendo afim de aplicar os conhecimentos adquiridos no estudo sobre : *Construindo micro-serviços com Spring Boot* e assim quero aqui compartilhar com vocês tudo que aprendi.
-O funcionamento do aplicativo é bem simples : Uma plataforma gamificada onde tentaremos acertar o máximo de operações matemáticas que pudermos. Você terá cerca de 5 segundos para resolver algo do tipo **18 x 92 = ?** ou **73 - 18 = ?** (Olha ! Não vale usar a calculadora. É trapaça !)
+**Matemática Play** é um aplicativo que estou desenvolvendo afim de aplicar os conhecimentos adquiridos no estudo sobre : **Construindo micro-serviços com Spring Boot** e assim compartilhar com vocês tudo que aprendi.
+O funcionamento do aplicativo é bem simples : Uma plataforma gamificada onde tentaremos acertar o máximo de operações matemáticas que pudermos. Você terá cerca de 5 segundos para resolver algo do tipo **18 x 92 = ?** ou **73 - 18 = ?** (Olha ! Não vale usar a calculadora. É trapaça !).
+
 No decorrer do jogo as coisas vão se complicar um pouquinho e você será tentado a se tornar o melhor em resolver estes tipos de operações, ficando assim o máximo de tempo na lista dos 10 melhores jogadores. Teremos pontuação, badges/insígnias, rankings e muito mais.
 
 Gostou da ideia ? Que tal dar uma passadinha rápida e já ir jogando. Acesse o link : [AQUI VEM UM LINK DO MATEMÁTICA PLAY HOSPEDADO NO HEROKU].
 > Nota : Só lembrando que este aplicativo ainda está em desenvolvimento, então coisas inconvenientes e erros grosseiros podem acontecer
 
+..
 
 ## Tecnologias utilizadas
 
@@ -44,8 +48,9 @@ Farei todo o desenvolvimento do app utilizando uma abordagem RESTFul e todo ferr
  
  - **Heroku**: Plataforma como serviço (PaaS) que permite aos desenvolvedores criar, executar e operar aplicativos inteiramente na nuvem.
  
- E muitos outros que não estão listados aqui mas que com certeza aparecerá em algum momento.
+..
 
+E muitos outros que não estão listados aqui mas que com certeza aparecerá em algum momento.
 Se você chegou até aqui, obrigado. Continuamos no próximo post.
 
 Até {}!
