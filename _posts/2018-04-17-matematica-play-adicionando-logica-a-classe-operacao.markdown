@@ -8,22 +8,22 @@ categories: spring-boot
 
 Vamos voltar a classe ```Operacao``` e criar alguns métodos para dar alguma lógica a ela.
 
-Vamos criar o método ```private void efetuarOperacao()``` que como o próprio nome diz, executa a operação matemática de acordo com os dados passados no construtor quando criado o objeto.
+Vamos criar o método ```private void efetuarOperacao()``` que como o próprio nome diz, executa a operação matemática de acordo com os dados passados no construtor quando criamos um objeto.
 
 Veja como ficou o código :
 ```java
 private void efetuarOperacao() {
-	switch (operador) {
-		case SOMA : 		
-			resultado = fatorA + fatorB; break;
-		case SUBTRACAO: 	
-			resultado = fatorA - fatorB; break;
-		case MULTIPLICACAO: 
-			resultado = fatorA * fatorB; break;
-		case DIVISAO: 		
-			validaDivisaoPorZero();
-			resultado = fatorA / fatorB; break;
-	}
+  switch (operador) {
+	case SOMA : 		
+		resultado = fatorA + fatorB; break;
+	case SUBTRACAO: 	
+		resultado = fatorA - fatorB; break;
+	case MULTIPLICACAO: 
+		resultado = fatorA * fatorB; break;
+	case DIVISAO: 		
+		validaDivisaoPorZero();
+		resultado = fatorA / fatorB; break;
+  }
 }
 ```
 
@@ -31,11 +31,11 @@ Também criamos o método ```private void validaDivisaoPorZero()``` para validar
 
 ```java
 private void validaDivisaoPorZero() {
-	if (operador.equals(Operador.DIVISAO)) {
-		if (fatorB == 0) {
-			throw new IllegalArgumentException("Na operação de divisão (/) o fatorB não pode ser zero (0)");
-		}
-	}		
+  if (operador.equals(Operador.DIVISAO)) {
+	if (fatorB == 0) {
+	  throw new IllegalArgumentException("Na operação de divisão (/) ofatorB não pode ser zero (0)");
+	}
+  }		
 }
 ```
 
@@ -45,14 +45,14 @@ Em seguida, sobrescreva o método ```toString()``` para que fique melhor apresen
 ```java
 @Override
 public String toString() {
-	return new StringBuilder()
-			.append("Operacao=[ ")
-			.append("fatorA = " + fatorA)
-			.append(", fatorB = " + fatorB)
-			.append(", operador = " + operador.getSimbolo())
-			.append(String.format(", resultado (%s %s %s) = %s", fatorA, operador.getSimbolo(), fatorB, resultado))
-			.append(" ]")
-			.toString();
+  return new StringBuilder()
+		.append("Operacao=[ ")
+		.append("fatorA = " + fatorA)
+		.append(", fatorB = " + fatorB)
+		.append(", operador = " + operador.getSimbolo())
+		.append(String.format(", resultado (%s %s %s) = %s", fatorA,operador.getSimbolo(), fatorB, resultado))
+		.append(" ]")
+		.toString();
 }
 ```
 
@@ -61,10 +61,10 @@ Antes de terminar está classe, adicione a chamada do método ```efetuarOperacao
 
 ```java
 public Operacao(int fatorA, int fatorB, Operador operador) {
-	this.fatorA = fatorA;
-	this.fatorB = fatorB;
-	this.operador = operador;
-	this.efetuarOperacao();
+  this.fatorA = fatorA;
+  this.fatorB = fatorB;
+  this.operador = operador;
+  this.efetuarOperacao();
 }
 ```
 
