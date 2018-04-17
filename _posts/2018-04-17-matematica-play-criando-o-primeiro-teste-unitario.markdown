@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Matemática Play - Criando o primeiro Teste Unitário"
+date:   2018-04-17 00:00:01 +0530
+categories: spring-boot
+---
+
+
 Nosso enum ```Operador``` não tem nada demais, então vamos adicionar o método ```toEnum(String simbolo)``` fazendo uma primeira versão e depois refatora-lo para usar alguns recursos do **Java 8** .
 
 ```java
