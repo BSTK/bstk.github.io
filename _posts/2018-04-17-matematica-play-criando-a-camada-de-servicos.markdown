@@ -6,83 +6,179 @@ categories: spring-boot
 ---
 
 
-Vamos usar o conceito de **user story (história de usuário)** para guiar o desenvolvimento do app. Se você nunca ouviu falar no termo **user story**, deixo aqui dois artigos ([O que é a User Story?](http://www.knowledge21.com.br/sobreagilidade/user-stories/o-que-e-user-story/) e [Como é a User Story?](http://www.knowledge21.com.br/sobreagilidade/user-stories/como-e-user-story/)) explicando o conceito de forma bem detalhada. Uma explicação rápida seria : **user story** é uma forma simples que busca descrever a necessidade do usuário. 
+Após construirmos a parte de dominio do nosso aplicativo, vamos dar mais um passo e começar a construir a camada de serviço.
 
-## User Story - Uma Operação Simples
-> Como usuário do aplicativo, quero apresentar uma operação matemática (soma, subtração, multiplicação, divisão) aleatória para que eu possa resolve-lá e que não seja muito fácil.
+Para isso, crie o pacote :
+> com.kuiiz.matematicaplay.operacao.service
 
-Então precisamos implementar o requisito do usuário, vamos dividir em pequenas tarefas :
- - Criar um serviço básico com a lógica de negócios. 
- - Criar um endpoint básico da API para acessar esse serviço (API REST). 
- - Criar uma página da Web básica para solicitar aos usuários que resolvam a operação.
+Nele criaremos as interfaces : ```OperacaoService```  e ```GeradorAleatorioService``` . 
 
+O código das interfaces ficou desta forma :
+```java
+public interface OperacaoService {
+	Operacao criaUmaOperacaoAleatoria();
+}
+```
+```java
+public interface GeradorAleatorioService {
+	int gerarFator();
+	Operador gerarOperador();	
+}
+```
+Vamos criar agora a implementação da interface ```OperacaoService```. Crie a classe  ```OperacaoServiceImpl```.
+O código completo ficará desta forma : 
 
-## Criando o domínio - Classe de Operação
+```java
+@Service
+public class OperacaoServiceImpl implements OperacaoService {
+	
+	@Autowired
+	private GeradorAleatorioService geradorService;
 
-Para que possamos concluir  todas as tarefas, vamos começar criando uma classe de domínio que representará uma operação (10 + 5 = 15, 20 * 2 = 40) e também um enum para representar os operadores (soma(+), subtração(-), multiplicação(x) e divisão(/)).
+	@Override
+	public Operacao criaUmaOperacaoAleatoria() {
+		
+		int fatorA = geradorService.gerarFator();
+		int fatorB = geradorService.gerarFator();
+		Operador operador = geradorService.gerarOperador();
+		
+		return new Operacao(fatorA, fatorB, operador);
+	}
+}
+```
+A annotation ```@Service``` especifica  que nossa classe será um serviço gerenciado pelo **Spring** e que desta forma poderá ser injetada em outras classes através do recurso de injeção de dependência. Além do mais ela é uma especialização da anotação ```@Component```.
+
+No trecho abaixo temos a injeção do serviço ```GeradorAleatorioService```  no qual o **Spring** nos fornecerá uma instancia desta classe.
+
+```java
+@Autowired  
+private GeradorAleatorioService geradorService;
+```
+
+O método ```criaUmaOperacaoAleatoria()``` é bem simples, ele criará um objeto ```Operacao``` com ajuda do serviço ```GeradorAleatorioService```  que cria os fatores (A e B) e um ```Operador``` de forma aleatória.
+
+Com todo esse código, já é hora de criarmos um teste e executar a chamada do serviço e verificar se as operações estão sendo criadas da forma desejada.
 
 Crie o pacote :
-> com.kuiiz.matematicaplay.operacao.domain
+> com.kuiiz.matematicaplay.operacao.service
 
-No pacote acima, cria a classe ```Operacao``` e o enum ```Operador```
+na pasta de testes ```src/test/java```. 
+Agora crie a classe de teste :  ```OperacaoServiceTest```  com o método ```void testCriaUmaOperacaoValidandoOResultado()```.
 
-Agora vamos colocar alguns atributos em nossa classe :
-
+Vejamos o código abaixo :
 ```java
-public class Operacao {
+// Imports 
+import static com.kuiiz.matematicaplay.operacao.domain.Operador.SOMA;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.BDDMockito.given;
 
-	private int fatorA;
-	private int fatorB;
-	private int resultado;
-	private Operador operador;
+// ... Demais imports
+
+@SpringBootTest
+@RunWith(SpringRunner.class)
+public class OperacaoServiceTest {
 	
-	/**
-	 * Operacao
-	 */
-	public Operacao() {}
-
-	/**
-	 * Operacao
-	 * @param fatorA
-	 * @param fatorB
-	 * @param operador
-	 */
-	public Operacao(int fatorA, int fatorB, Operador operador) {
-		this.fatorA = fatorA;
-		this.fatorB = fatorB;
-		this.operador = operador;
+	@MockBean
+	public GeradorAleatorioService geradorService;
+	
+	@Autowired
+	private OperacaoService operacaoService;
+	
+	@Test
+	public void testCriaUmaOperacaoValidandoOResultado() {		
+		
+		/**
+		 * Dado a chamada de geradorService.geraFator(), deve me retornar 100 e 50
+		 */
+		given(geradorService.gerarFator()).willReturn(100, 50);
+		
+		/**
+		 * Dado a chamada de gerarOperador(), deve me retornar um operador (+ - * \/)
+		 */
+		given(geradorService.gerarOperador()).willReturn(SOMA);
+		
+		/**
+		 * Quando eu chamar o método operacaoService.criaUmaOperacaoRadomica()
+		 */
+		Operacao operacao = operacaoService.criaUmaOperacaoAleatoria();
+		
+		/**
+		 * Então devo ter os seguintes resultados
+		 */
+		assertThat(operacao.getFatorA()).isEqualTo(100);
+		assertThat(operacao.getFatorB()).isEqualTo(50);
+		assertThat(operacao.getOperador()).isEqualTo(SOMA);
+		assertThat(operacao.getResultado()).isEqualTo(150);
 	}
 }
 ```
-E também adicionar código ao nosso enum :
+Este teste tem muitas coisas novas que não tínhamos visto até então. Vamos analisa-lo :
+```@SpringBootTest``` está anotação será responsável por carregar o contexto do **Spring**, assim sendo possível fazer injeções de dependencias nos nossos testes através da anotação ```@Autowired```.
+
+```@RunWith(SpringRunner.class)``` está anotação especifica quem rodará nosso teste, não sendo mais a forma padrão que o **JUnit** executa e sim algo apropriado ao **Spring**.
+
+```@MockBean``` é muito importante aqui, pois ela diz ao **Spring** para injetar um *mock (objeto simulado)* da classe  ```GeradorAleatorioService``` ja que ainda não possuímos uma implementação concreta desta interface.
+
+O restante do código é auto-explicativo através dos comentários inseridos em cada passo do teste. Novamente estamos usando o **[Assertj](http://joel-costigliola.github.io/assertj)** ```(assertThat())``` e algo novo que é o **[Mockito](http://site.mockito.org/)** ```(given())``` .
+
+Perceba que estamos testando apenas uma operação de soma :
+```java
+assertThat(operacao.getOperador()).isEqualTo(SOMA);
+```
+O correto seria testarmos todas as opções disponíveis. Hora de refatorar !
+Crie o método ```private void executaOperacao(int fatorA, Operador operador, int fatorB, int resultado)```.
 
 ```java
-public enum Operador {
-
-	SOMA("soma", "+"),
-	SUBTRACAO("subtração", "-"),
-	MULTIPLICACAO("multiplicação", "*"),
-	DIVISAO("divisão", "/");
-	
-	private final String descricao;
-	private final String simbolo;
-	
+private void executaOperacao(int fatorA, Operador operador, int fatorB, int resultado) {
+		
 	/**
-	 * Operador
-	 * @param descricao
-	 * @param simbolo
+	 * Dado a chamada de geradorService.geraFator(), deve me retornar 100 e 50
 	 */
-	private Operador(String descricao, String simbolo) {
-		this.descricao = descricao;
-		this.simbolo = simbolo;
-	}
+	given(geradorService.gerarFator()).willReturn(fatorA, fatorB);
+		
+	/**
+	 * Dado a chamada de gerarOperador(), deve me retornar a operação soma (Operador.DIVISAO)
+	 */
+	given(geradorService.gerarOperador()).willReturn(operador);
+		
+	/**
+	 * Quando eu chamar o método operacaoService.criaUmaOperacaoRadomica()
+	 */
+	Operacao operacao = operacaoService.criaUmaOperacaoAleatoria();
+		
+	/**
+	 * Então devo ter os seguintes resultados
+	 */
+	assertThat(operacao.getFatorA()).isEqualTo(fatorA);
+	assertThat(operacao.getFatorB()).isEqualTo(fatorB);
+	assertThat(operacao.getOperador()).isEqualTo(operador);
+	assertThat(operacao.getResultado()).isEqualTo(resultado);
 }
 ```
-Logo em seguida, crie os ```get's e set's``` para a classe ```Operacao```e como nosso enum possui todos os atributos final, crie apenas os métodos ``get's``.
+Agora nosso método de teste pode executar todas as operações sem repetir código : 
+```java
+@Test
+public void testCriaUmaOperacaoValidandoOResultado() {		
+		
+	executaOperacao(100, SOMA, 50, 150);
+	executaOperacao(100, SUBTRACAO, 50, 50);
+	executaOperacao(100, MULTIPLICACAO, 50, 5000);
+	executaOperacao(100, DIVISAO, 50, 2);		
+}
+```
+Se você prestar atenção na chamado do método :
+```java
+executaOperacao(100, SOMA,  50,  150);
+```
+verá que ficou de forma bem semântica e de fácil compreensão, lendo-o métodos, temos algo como : 
+>executa uma operação 100 SOMA 50 resultado 150
 
-Bom, temos algum código até aqui mas que não faz absolutamente nada por enquanto.  No próximo post estaremos incluindo alguns métodos com alguma lógica e também inciando com os testes de unidade.
+Chegamos ao final de mais um post, desta vez com um teste de integração bem completo utilizando tudo que já foi criado. Caso você tente executar o aplicativo agora, ele mostrará um erro dizendo que não pode injetar o bean ```GeradorAleatorioService```.
+
+> **'com.kuiiz.matematicaplay.operacao.service.GeradorAleatorioService' that could not be found.**
+
+Não se preocupe, já iremos corrigir isso no próximo passo (-:
 
 Se você chegou até aqui, obrigado. Continuamos no próximo post.
 
 Até {}!
-
