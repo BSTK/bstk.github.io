@@ -11,7 +11,7 @@ Após construirmos a parte de dominio do nosso aplicativo, vamos dar mais um pas
 Para isso, crie o pacote :
 > com.kuiiz.matematicaplay.operacao.service
 
-Nele criaremos as interfaces : ```OperacaoService```  e ```GeradorAleatorioService``` . 
+Nele criaremos as interfaces : ```OperacaoService```  e ```GeradorAleatorioService```
 
 O código das interfaces ficou desta forma :
 ```java
@@ -46,7 +46,7 @@ public class OperacaoServiceImpl implements OperacaoService {
 	}
 }
 ```
-A annotation ```@Service``` especifica  que nossa classe será um serviço gerenciado pelo **Spring** e que desta forma poderá ser injetada em outras classes através do recurso de injeção de dependência. Além do mais ela é uma especialização da anotação ```@Component```.
+A annotation ```@Service``` especifica  que nossa classe será um serviço gerenciado pelo **Spring** e assim poderá ser injetada em outras classes através do recurso de injeção de dependência. Além do mais ela é uma especialização da anotação ```@Component```.
 
 No trecho abaixo temos a injeção do serviço ```GeradorAleatorioService```  no qual o **Spring** nos fornecerá uma instancia desta classe.
 
@@ -62,8 +62,9 @@ Com todo esse código, já é hora de criarmos um teste e executar a chamada do 
 Crie o pacote :
 > com.kuiiz.matematicaplay.operacao.service
 
-na pasta de testes ```src/test/java```. 
-Agora crie a classe de teste :  ```OperacaoServiceTest```  com o método ```void testCriaUmaOperacaoValidandoOResultado()```.
+na pasta de testes ```src/test/java```
+
+Agora crie a classe de teste : ```OperacaoServiceTest``` com o método ```void testCriaUmaOperacaoValidandoOResultado()```.
 
 Vejamos o código abaixo :
 ```java
@@ -113,6 +114,7 @@ public class OperacaoServiceTest {
 }
 ```
 Este teste tem muitas coisas novas que não tínhamos visto até então. Vamos analisa-lo :
+
 ```@SpringBootTest``` está anotação será responsável por carregar o contexto do **Spring**, assim sendo possível fazer injeções de dependencias nos nossos testes através da anotação ```@Autowired```.
 
 ```@RunWith(SpringRunner.class)``` está anotação especifica quem rodará nosso teste, não sendo mais a forma padrão que o **JUnit** executa e sim algo apropriado ao **Spring**.
@@ -170,10 +172,12 @@ Se você prestar atenção na chamado do método :
 ```java
 executaOperacao(100, SOMA,  50,  150);
 ```
-verá que ficou de forma bem semântica e de fácil compreensão, lendo-o métodos, temos algo como : 
+verá que ficou de forma bem semântica e de fácil compreensão, lendo-o método, temos algo como : 
 >executa uma operação 100 SOMA 50 resultado 150
 
-Chegamos ao final de mais um post, desta vez com um teste de integração bem completo utilizando tudo que já foi criado. Caso você tente executar o aplicativo agora, ele mostrará um erro dizendo que não pode injetar o bean ```GeradorAleatorioService```.
+
+
+Bom chegamos ao final de mais um post, desta vez com um teste de integração bem completo utilizando tudo que já foi criado. Caso você tente executar o aplicativo agora, ele mostrará um erro dizendo que não pode injetar o bean ```GeradorAleatorioService```.
 
 > **'com.kuiiz.matematicaplay.operacao.service.GeradorAleatorioService' that could not be found.**
 
