@@ -70,7 +70,7 @@ public Operacao(int fatorA, int fatorB, Operador operador) {
 
 E aproveite para apagar o construtor padrão que criamos em posts anteriores. 
 
-Este post será bem curto, apenas para completarmos essa parte de domínio. Nos próximo vamos criar nossas classes e interfaces de serviços e também um teste integrado mesmo sem ter a implementação principal construída  afim de usarmos **objetos simulados (mocks)** e toda facilidade de testes que o **Spring Boot** nos fornece.
+Este post será bem curto, apenas para completarmos essa parte de domínio. Nos próximos vamos criar nossas classes e interfaces de serviços e também um teste integrado mesmo sem ter a implementação principal construída  afim de usarmos **objetos simulados (mocks)** e toda facilidade de testes que o **Spring Boot** nos fornece.
 
 
 Se você chegou até aqui, obrigado. Continuamos no próximo post.
