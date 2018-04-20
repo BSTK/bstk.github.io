@@ -17,7 +17,7 @@ O funcionamento do aplicativo é bem simples : Uma plataforma gamificada onde te
 
 No decorrer do jogo as coisas vão se complicar um pouquinho e você será tentado a se tornar o melhor em resolver estes tipos de operações, ficando assim o máximo de tempo na lista dos 10 melhores jogadores. Teremos pontuação, badges/insígnias, rankings e muito mais.
 
-Gostou da ideia ? Que tal dar uma passadinha rápida e já ir jogando. Acesse o link : [AQUI VEM UM LINK DO MATEMÁTICA PLAY HOSPEDADO NO HEROKU].
+Gostou da ideia ? Que tal dar uma passadinha rápida e já ir jogando. Acesse o link : [Matemática Play](https://matematica-play.herokuapp.com/).
 > Nota : Só lembrando que este aplicativo ainda está em desenvolvimento, então coisas inconvenientes e erros grosseiros podem acontecer
 
 
