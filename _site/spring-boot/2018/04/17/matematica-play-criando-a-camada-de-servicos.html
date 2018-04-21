@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Matemática Play - Criando a camada de serviços</title>
+  <meta name="description" content="Após construirmos a parte de dominio do nosso aplicativo, vamos dar mais um passo e começar a construir a camada de serviço.">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Source+Sans+Pro:400,700,200,300|Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://brunoluz.com.br/spring-boot/2018/04/17/matematica-play-criando-a-camada-de-servicos.html">
+  <link rel="alternate" type="application/rss+xml" title="Bruno Luz" href="http://brunoluz.com.br/feed.xml">
+</head>
+
+
+  <body class=" light  ">
+
+    
+<div class="wrapper">
+  <center> <a href="/"><div class="site-title">   Bruno Luz </div></a></center>
+</div>
+<div class="wrapper site-description">
+<center>  Programmer | Code </center>
+</div>
+<div class="wrapper">
+  <div class="trigger site-navigation">
+    <a class="page-link" href="http://brunoluz.com.br">HOME</a>
+
+    
+    
+    
+    
+    
+    
+
+      <span class="exclamationMark">/</span>
+      <a class="page-link" href="/sobre">
+        Sobre
+      </a>
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline"><a class="post-title-link"  href="/spring-boot/2018/04/17/matematica-play-criando-a-camada-de-servicos.html">Matemática Play - Criando a camada de serviços</a></h1>
+  <center>  <p class="post-meta"><time datetime="2018-04-16T15:30:03-03:00" itemprop="datePublished">Apr 17, 2018</time></p>
+    
+   </center>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Após construirmos a parte de dominio do nosso aplicativo, vamos dar mais um passo e começar a construir a camada de serviço.</p>
+
+<p>Para isso, crie o pacote :</p>
+<blockquote>
+  <p>com.kuiiz.matematicaplay.operacao.service</p>
+</blockquote>
+
+<p>Nele criaremos as interfaces : <code class="highlighter-rouge">OperacaoService</code>  e <code class="highlighter-rouge">GeradorAleatorioService</code></p>
+
+<p>O código das interfaces ficou desta forma :</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">OperacaoService</span> <span class="o">{</span>
+	<span class="n">Operacao</span> <span class="nf">criaUmaOperacaoAleatoria</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">GeradorAleatorioService</span> <span class="o">{</span>
+	<span class="kt">int</span> <span class="nf">gerarFator</span><span class="o">();</span>
+	<span class="n">Operador</span> <span class="nf">gerarOperador</span><span class="o">();</span>	
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>Vamos criar agora a implementação da interface <code class="highlighter-rouge">OperacaoService</code>. Crie a classe  <code class="highlighter-rouge">OperacaoServiceImpl</code>.
+O código completo ficará desta forma :</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OperacaoServiceImpl</span> <span class="kd">implements</span> <span class="n">OperacaoService</span> <span class="o">{</span>
+	
+	<span class="nd">@Autowired</span>
+	<span class="kd">private</span> <span class="n">GeradorAleatorioService</span> <span class="n">geradorService</span><span class="o">;</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">Operacao</span> <span class="nf">criaUmaOperacaoAleatoria</span><span class="o">()</span> <span class="o">{</span>
+		
+		<span class="kt">int</span> <span class="n">fatorA</span> <span class="o">=</span> <span class="n">geradorService</span><span class="o">.</span><span class="na">gerarFator</span><span class="o">();</span>
+		<span class="kt">int</span> <span class="n">fatorB</span> <span class="o">=</span> <span class="n">geradorService</span><span class="o">.</span><span class="na">gerarFator</span><span class="o">();</span>
+		<span class="n">Operador</span> <span class="n">operador</span> <span class="o">=</span> <span class="n">geradorService</span><span class="o">.</span><span class="na">gerarOperador</span><span class="o">();</span>
+		
+		<span class="k">return</span> <span class="k">new</span> <span class="nf">Operacao</span><span class="o">(</span><span class="n">fatorA</span><span class="o">,</span> <span class="n">fatorB</span><span class="o">,</span> <span class="n">operador</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>A annotation <code class="highlighter-rouge">@Service</code> especifica  que nossa classe será um serviço gerenciado pelo <strong>Spring</strong> e assim poderá ser injetada em outras classes através do recurso de injeção de dependência. Além do mais ela é uma especialização da anotação <code class="highlighter-rouge">@Component</code>.</p>
+
+<p>No trecho abaixo temos a injeção do serviço <code class="highlighter-rouge">GeradorAleatorioService</code>  no qual o <strong>Spring</strong> nos fornecerá uma instancia desta classe.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@Autowired</span>  
+<span class="kd">private</span> <span class="n">GeradorAleatorioService</span> <span class="n">geradorService</span><span class="o">;</span>
+</code></pre>
+</div>
+
+<p>O método <code class="highlighter-rouge">criaUmaOperacaoAleatoria()</code> é bem simples, ele criará um objeto <code class="highlighter-rouge">Operacao</code> com ajuda do serviço <code class="highlighter-rouge">GeradorAleatorioService</code>  que cria os fatores (A e B) e um <code class="highlighter-rouge">Operador</code> de forma aleatória.</p>
+
+<p>Com todo esse código, já é hora de criarmos um teste e executar a chamada do serviço e verificar se as operações estão sendo criadas da forma desejada.</p>
+
+<p>Crie o pacote :</p>
+<blockquote>
+  <p>com.kuiiz.matematicaplay.operacao.service</p>
+</blockquote>
+
+<p>na pasta de testes <code class="highlighter-rouge">src/test/java</code></p>
+
+<p>Agora crie a classe de teste : <code class="highlighter-rouge">OperacaoServiceTest</code> com o método <code class="highlighter-rouge">void testCriaUmaOperacaoValidandoOResultado()</code>.</p>
+
+<p>Vejamos o código abaixo :</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// Imports </span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">com</span><span class="o">.</span><span class="na">kuiiz</span><span class="o">.</span><span class="na">matematicaplay</span><span class="o">.</span><span class="na">operacao</span><span class="o">.</span><span class="na">domain</span><span class="o">.</span><span class="na">Operador</span><span class="o">.</span><span class="na">SOMA</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">assertj</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">Assertions</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">mockito</span><span class="o">.</span><span class="na">BDDMockito</span><span class="o">.</span><span class="na">given</span><span class="o">;</span>
+
+<span class="c1">// ... Demais imports</span>
+
+<span class="nd">@SpringBootTest</span>
+<span class="nd">@RunWith</span><span class="o">(</span><span class="n">SpringRunner</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OperacaoServiceTest</span> <span class="o">{</span>
+	
+	<span class="nd">@MockBean</span>
+	<span class="kd">public</span> <span class="n">GeradorAleatorioService</span> <span class="n">geradorService</span><span class="o">;</span>
+	
+	<span class="nd">@Autowired</span>
+	<span class="kd">private</span> <span class="n">OperacaoService</span> <span class="n">operacaoService</span><span class="o">;</span>
+	
+	<span class="nd">@Test</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCriaUmaOperacaoValidandoOResultado</span><span class="o">()</span> <span class="o">{</span>		
+		
+		<span class="cm">/**
+		 * Dado a chamada de geradorService.geraFator(), deve me retornar 100 e 50
+		 */</span>
+		<span class="n">given</span><span class="o">(</span><span class="n">geradorService</span><span class="o">.</span><span class="na">gerarFator</span><span class="o">()).</span><span class="na">willReturn</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="mi">50</span><span class="o">);</span>
+		
+		<span class="cm">/**
+		 * Dado a chamada de gerarOperador(), deve me retornar um operador (+ - * \/)
+		 */</span>
+		<span class="n">given</span><span class="o">(</span><span class="n">geradorService</span><span class="o">.</span><span class="na">gerarOperador</span><span class="o">()).</span><span class="na">willReturn</span><span class="o">(</span><span class="n">SOMA</span><span class="o">);</span>
+		
+		<span class="cm">/**
+		 * Quando eu chamar o método operacaoService.criaUmaOperacaoRadomica()
+		 */</span>
+		<span class="n">Operacao</span> <span class="n">operacao</span> <span class="o">=</span> <span class="n">operacaoService</span><span class="o">.</span><span class="na">criaUmaOperacaoAleatoria</span><span class="o">();</span>
+		
+		<span class="cm">/**
+		 * Então devo ter os seguintes resultados
+		 */</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">operacao</span><span class="o">.</span><span class="na">getFatorA</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">operacao</span><span class="o">.</span><span class="na">getFatorB</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="mi">50</span><span class="o">);</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">operacao</span><span class="o">.</span><span class="na">getOperador</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">SOMA</span><span class="o">);</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">operacao</span><span class="o">.</span><span class="na">getResultado</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="mi">150</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>Este teste tem muitas coisas novas que não tínhamos visto até então. Vamos analisa-lo :</p>
+
+<p><code class="highlighter-rouge">@SpringBootTest</code> está anotação será responsável por carregar o contexto do <strong>Spring</strong>, assim sendo possível fazer injeções de dependencias nos nossos testes através da anotação <code class="highlighter-rouge">@Autowired</code>.</p>
+
+<p><code class="highlighter-rouge">@RunWith(SpringRunner.class)</code> está anotação especifica quem rodará nosso teste, não sendo mais a forma padrão que o <strong>JUnit</strong> executa e sim algo apropriado ao <strong>Spring</strong>.</p>
+
+<p><code class="highlighter-rouge">@MockBean</code> é muito importante aqui, pois ela diz ao <strong>Spring</strong> para injetar um <em>mock (objeto simulado)</em> da classe  <code class="highlighter-rouge">GeradorAleatorioService</code> ja que ainda não possuímos uma implementação concreta desta interface.</p>
+
+<p>O restante do código é auto-explicativo através dos comentários inseridos em cada passo do teste. Novamente estamos usando o <strong><a href="http://joel-costigliola.github.io/assertj">Assertj</a></strong> <code class="highlighter-rouge">(assertThat())</code> e algo novo que é o <strong><a href="http://site.mockito.org/">Mockito</a></strong> <code class="highlighter-rouge">(given())</code> .</p>
+
+<p>Perceba que estamos testando apenas uma operação de soma :</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">assertThat</span><span class="o">(</span><span class="n">operacao</span><span class="o">.</span><span class="na">getOperador</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">SOMA</span><span class="o">);</span>
+</code></pre>
+</div>
+<p>O correto seria testarmos todas as opções disponíveis. Hora de refatorar !
+Crie o método <code class="highlighter-rouge">private void executaOperacao(int fatorA, Operador operador, int fatorB, int resultado)</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">executaOperacao</span><span class="o">(</span><span class="kt">int</span> <span class="n">fatorA</span><span class="o">,</span> <span class="n">Operador</span> <span class="n">operador</span><span class="o">,</span> <span class="kt">int</span> <span class="n">fatorB</span><span class="o">,</span> <span class="kt">int</span> <span class="n">resultado</span><span class="o">)</span> <span class="o">{</span>
+		
+	<span class="cm">/**
+	 * Dado a chamada de geradorService.geraFator(), deve me retornar 100 e 50
+	 */</span>
+	<span class="n">given</span><span class="o">(</span><span class="n">geradorService</span><span class="o">.</span><span class="na">gerarFator</span><span class="o">()).</span><span class="na">willReturn</span><span class="o">(</span><span class="n">fatorA</span><span class="o">,</span> <span class="n">fatorB</span><span class="o">);</span>
+		
+	<span class="cm">/**
+	 * Dado a chamada de gerarOperador(), deve me retornar a operação soma (Operador.DIVISAO)
+	 */</span>
+	<span class="n">given</span><span class="o">(</span><span class="n">geradorService</span><span class="o">.</span><span class="na">gerarOperador</span><span class="o">()).</span><span class="na">willReturn</span><span class="o">(</span><span class="n">operador</span><span class="o">);</span>
+		
+	<span class="cm">/**
+	 * Quando eu chamar o método operacaoService.criaUmaOperacaoRadomica()
+	 */</span>
+	<span class="n">Operacao</span> <span class="n">operacao</span> <span class="o">=</span> <span class="n">operacaoService</span><span class="o">.</span><span class="na">criaUmaOperacaoAleatoria</span><span class="o">();</span>
+		
+	<span class="cm">/**
+	 * Então devo ter os seguintes resultados
+	 */</span>
+	<span class="n">assertThat</span><span class="o">(</span><span class="n">operacao</span><span class="o">.</span><span class="na">getFatorA</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">fatorA</span><span class="o">);</span>
+	<span class="n">assertThat</span><span class="o">(</span><span class="n">operacao</span><span class="o">.</span><span class="na">getFatorB</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">fatorB</span><span class="o">);</span>
+	<span class="n">assertThat</span><span class="o">(</span><span class="n">operacao</span><span class="o">.</span><span class="na">getOperador</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">operador</span><span class="o">);</span>
+	<span class="n">assertThat</span><span class="o">(</span><span class="n">operacao</span><span class="o">.</span><span class="na">getResultado</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">resultado</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>Agora nosso método de teste pode executar todas as operações sem repetir código :</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCriaUmaOperacaoValidandoOResultado</span><span class="o">()</span> <span class="o">{</span>		
+		
+	<span class="n">executaOperacao</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="n">SOMA</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">150</span><span class="o">);</span>
+	<span class="n">executaOperacao</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="n">SUBTRACAO</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">50</span><span class="o">);</span>
+	<span class="n">executaOperacao</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="n">MULTIPLICACAO</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">5000</span><span class="o">);</span>
+	<span class="n">executaOperacao</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="n">DIVISAO</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">2</span><span class="o">);</span>		
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>Se você prestar atenção na chamado do método :</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">executaOperacao</span><span class="o">(</span><span class="mi">100</span><span class="o">,</span> <span class="n">SOMA</span><span class="o">,</span>  <span class="mi">50</span><span class="o">,</span>  <span class="mi">150</span><span class="o">);</span>
+</code></pre>
+</div>
+<p>verá que ficou de forma bem semântica e de fácil compreensão, lendo-o método, temos algo como :</p>
+<blockquote>
+  <p>executa uma operação 100 SOMA 50 resultado 150</p>
+</blockquote>
+
+<p>Bom chegamos ao final de mais um post, desta vez com um teste de integração bem completo utilizando tudo que já foi criado. Caso você tente executar o aplicativo agora, ele mostrará um erro dizendo que não pode injetar o bean <code class="highlighter-rouge">GeradorAleatorioService</code>.</p>
+
+<blockquote>
+  <p><strong>‘com.kuiiz.matematicaplay.operacao.service.GeradorAleatorioService’ that could not be found.</strong></p>
+</blockquote>
+
+<p>Não se preocupe, já iremos corrigir isso no próximo passo (-:</p>
+
+<p>Se você chegou até aqui, obrigado. Continuamos no próximo post.</p>
+
+<p>Até {}!</p>
+
+  </div>
+
+  <footer class="postNavigation">
+  
+    <a class="postPrev" href="/spring-boot/2018/04/17/matematica-play-adicionando-logica-a-classe-operacao.html">
+        &laquo; Matemática Play - Adicionando lógica a classe Operação
+    </a>
+  
+  
+
+  </footer>
+
+</article>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://http-brunoluz-com-br.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading small-site-title">Bruno Luz</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list footer-content">
+          <li>Powered By <a href="http://github.com/hemangsk/Gravity">Gravity</a></li>
+          <li>Made with <i class="fa fa-heart"></i> on <a href="http://jekyllrb.com"><span>{ { Jekyll } }</a></span></li>
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2 footer-content">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bstk" target="_blank"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">bstk</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://www.facebook.com/kuiiz.brunoluz" target="_blank"><span class="icon icon--github"> <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 500 500" height="500px" id="Layer_1" version="1.1" viewBox="0 0 500 500" width="500px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M31.949,431.711c0,20.078,16.264,36.34,36.34,36.34h363.421  c20.078,0,36.34-16.262,36.34-36.34V68.29c0-20.077-16.262-36.34-36.34-36.34H68.29c-20.077,0-36.34,16.264-36.34,36.34V431.711z   M259.086,413.538V268.172h-36.342v-54.514h36.342c0-93.671,3.993-99.939,118.112-99.939v54.513  c-60.149,0-54.514,3.362-54.514,45.427h54.514v54.514h-54.514v145.366H259.086z" fill="#010101" fill-rule="evenodd"/></svg></span><span class="username"> brunoluz</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3 site-description">
+        <p>Programmer | Code</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'http-brunoluz-com-br';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+
+  </body>
+
+</html>

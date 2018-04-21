@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Matemática Play - Criando o primeiro Teste Unitário</title>
+  <meta name="description" content="Nosso enum Operador não tem nada demais, então vamos adicionar o método toEnum(String simbolo) fazendo uma primeira versão e depois refatora-lo para usar alg...">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Source+Sans+Pro:400,700,200,300|Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://brunoluz.com.br/spring-boot/2018/04/17/matematica-play-criando-o-primeiro-teste-unitario.html">
+  <link rel="alternate" type="application/rss+xml" title="Bruno Luz" href="http://brunoluz.com.br/feed.xml">
+</head>
+
+
+  <body class=" light  ">
+
+    
+<div class="wrapper">
+  <center> <a href="/"><div class="site-title">   Bruno Luz </div></a></center>
+</div>
+<div class="wrapper site-description">
+<center>  Programmer | Code </center>
+</div>
+<div class="wrapper">
+  <div class="trigger site-navigation">
+    <a class="page-link" href="http://brunoluz.com.br">HOME</a>
+
+    
+    
+    
+    
+    
+    
+
+      <span class="exclamationMark">/</span>
+      <a class="page-link" href="/sobre">
+        Sobre
+      </a>
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline"><a class="post-title-link"  href="/spring-boot/2018/04/17/matematica-play-criando-o-primeiro-teste-unitario.html">Matemática Play - Criando o primeiro Teste Unitário</a></h1>
+  <center>  <p class="post-meta"><time datetime="2018-04-16T15:30:01-03:00" itemprop="datePublished">Apr 17, 2018</time></p>
+    
+   </center>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Nosso enum <code class="highlighter-rouge">Operador</code> não tem nada demais, então vamos adicionar o método <code class="highlighter-rouge">toEnum(String simbolo)</code> fazendo uma primeira versão e depois refatora-lo para usar alguns recursos do <strong>Java 8</strong> .</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="n">Operador</span> <span class="nf">toEnum</span><span class="o">(</span><span class="n">String</span> <span class="n">simbolo</span><span class="o">)</span> <span class="o">{</span>		
+	<span class="n">Operador</span> <span class="n">operador</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+		
+	<span class="k">for</span> <span class="o">(</span><span class="n">Operador</span> <span class="n">o</span> <span class="o">:</span> <span class="n">values</span><span class="o">())</span> <span class="o">{</span>
+		<span class="k">if</span> <span class="o">(</span><span class="n">o</span><span class="o">.</span><span class="na">getSimbolo</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">simbolo</span><span class="o">))</span> <span class="o">{</span>
+			<span class="n">operador</span> <span class="o">=</span> <span class="n">o</span><span class="o">;</span>
+			<span class="k">break</span><span class="o">;</span>
+		<span class="o">}</span>
+	<span class="o">}</span>	
+	<span class="k">return</span> <span class="n">operador</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>Este método será útil quando quisermos criar um objeto <code class="highlighter-rouge">Operador</code> através do seu simbolo (+, -, *, /). Um exemplo de uso seria :</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">Operador</span> <span class="n">soma</span> <span class="o">=</span> <span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"+"</span><span class="o">);</span>
+<span class="n">Operador</span> <span class="n">subtracao</span> <span class="o">=</span> <span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"-"</span><span class="o">);</span>
+<span class="n">Operador</span> <span class="n">multiplicacao</span> <span class="o">=</span> <span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"*"</span><span class="o">);</span>
+<span class="n">Operador</span> <span class="n">divisao</span> <span class="o">=</span> <span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"/"</span><span class="o">);</span>
+</code></pre>
+</div>
+<p>Agora que nosso método está pronto, vamos criar um teste unitário para garantir que a lógica implementada esteja de fato correta.</p>
+
+<p>Na pasta <code class="highlighter-rouge">src/test/java</code> crie o pacote :</p>
+<blockquote>
+  <p>com.kuiiz.matematicaplay.operacao.domain</p>
+</blockquote>
+
+<p>Em seguida, crie a classe <code class="highlighter-rouge">OperadorTest</code> que é o mesmo nome do nosso enum mas com sufixo <code class="highlighter-rouge">Test</code>.</p>
+
+<p>Vamos incluir dois métodos de testes, um para testar o caminho feliz :
+ <code class="highlighter-rouge">void testCriaUmOperadorDeAcorComSeuSimbolo()</code> 
+ e outro para o caminho de falha <code class="highlighter-rouge">void testDeveRetornarNullPorSimboloInvalido()</code>.</p>
+
+<p>A classe completa tem o seguinte código :</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">kuiiz</span><span class="o">.</span><span class="na">matematicaplay</span><span class="o">.</span><span class="na">operacao</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">assertj</span><span class="o">.</span><span class="na">core</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">Assertions</span><span class="o">.</span><span class="na">assertThat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.kuiiz.matematicaplay.operacao.domain.Operador</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OperadorTest</span> <span class="o">{</span>
+
+	<span class="nd">@Test</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCriaUmOperadorDeAcorComSeuSimbolo</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"+"</span><span class="o">)).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">SOMA</span><span class="o">);</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">""</span><span class="o">)).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">SUBTRACAO</span><span class="o">);</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"*"</span><span class="o">)).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">MULTIPLICACAO</span><span class="o">);</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"/"</span><span class="o">)).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">DIVISAO</span><span class="o">);</span>		
+	<span class="o">}</span>
+	
+	<span class="nd">@Test</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testDeveRetornarNullPorSimboloInvalido</span><span class="o">()</span> <span class="o">{</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">toEnum2</span><span class="o">(</span><span class="s">"&amp;"</span><span class="o">)).</span><span class="na">isNull</span><span class="o">();</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">toEnum2</span><span class="o">(</span><span class="s">"#"</span><span class="o">)).</span><span class="na">isNull</span><span class="o">();</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">toEnum2</span><span class="o">(</span><span class="s">"@"</span><span class="o">)).</span><span class="na">isNull</span><span class="o">();</span>
+		<span class="n">assertThat</span><span class="o">(</span><span class="n">Operador</span><span class="o">.</span><span class="na">toEnum2</span><span class="o">(</span><span class="s">"("</span><span class="o">)).</span><span class="na">isNull</span><span class="o">();</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>Vamos algumas explicações. A annotation <code class="highlighter-rouge">@Test</code> é do framework <strong><a href="https://junit.org/junit5/">JUnit</a></strong> e serve para dizer que aquele método será um caso de teste. Perceba que o nome do método é bem grande e muito descritivo, assim fica fácil entender de cara o que aquele caso está testando.</p>
+
+<p>Estamos utilizando o  <strong><a href="http://joel-costigliola.github.io/assertj/">AssertJ</a></strong> (<code class="highlighter-rouge">assertThat(), isEqualTo(), isNull()</code>) que fornece uma api fluente para nos ajudar a validar (asserts) nossos testes.</p>
+
+<p>Lembrando que quando criamos nosso projeto usando o <strong>Spring Initializr</strong> ele já vem com a dependência  do <code class="highlighter-rouge">spring-boot-starter-test</code> que fornece todas as bibliotecas necessárias para o uso de testes automatizados.</p>
+
+<p>Se você olhar o arquivo <code class="highlighter-rouge">pom.xml</code>, verá a dependência :</p>
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+	<span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+	<span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+	<span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre>
+</div>
+
+<p>As coisas começaram a ficar legais, já criamos até nosso primeiro teste unitário.</p>
+
+<p>Bom é hora de refatorar, hora de melhorar nosso método <code class="highlighter-rouge">toEnum(String simbolo)</code>, veja abaixo como ficou a nova versão :</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="n">Operador</span> <span class="nf">toEnum</span><span class="o">(</span><span class="n">String</span> <span class="n">simbolo</span><span class="o">)</span> <span class="o">{</span>
+	<span class="n">Assert</span><span class="o">.</span><span class="na">isTrue</span><span class="o">(</span><span class="s">"+-*/"</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">simbolo</span><span class="o">),</span> <span class="s">"O simbolo "</span> <span class="o">+</span> <span class="n">simbolo</span> <span class="o">+</span> <span class="s">" é um operador inválido"</span><span class="o">);</span>
+	<span class="k">return</span> <span class="n">Stream</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">values</span><span class="o">())</span>
+				<span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">o</span> <span class="o">-&gt;</span> <span class="n">o</span><span class="o">.</span><span class="na">getSimbolo</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="n">simbolo</span><span class="o">))</span>
+				<span class="o">.</span><span class="na">findFirst</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">get</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>Usamos a classe utilitária <code class="highlighter-rouge">Assert.isTrue()</code> para validar caso seja informado um caractere inválido (todos diferentes de + - * / ). Usamos também a api <code class="highlighter-rouge">Stream</code> para filtar (<strong><code class="highlighter-rouge">filter(o -&gt; o.getSimbolo().equals(simbolo))</code></strong>) na lista de enuns qual deles é correspondente ao simbolo passado por parâmetro e pegar o primeiro elemento .</p>
+<blockquote>
+  <p><strong><em><code class="highlighter-rouge">filter(o -&gt; o.getSimbolo().equals(simbolo))</code></em></strong> está fazendo a mesma coisa que fizemos com o <strong>if</strong> na primeira versão do método.</p>
+</blockquote>
+
+<p>Caso você execute o teste unitário, perceberá que o método de teste <code class="highlighter-rouge">testDeveRetornarNullPorSimboloInvalido()</code> irá falhar pois alteramos a lógica do código.</p>
+
+<blockquote>
+  <p>java.lang.IllegalArgumentException: O simbolo &amp; é um operador inválid</p>
+</blockquote>
+
+<p>Para corrigir isso, vamos refatora-lo também, está é a nova versão :</p>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testDeveRetornarNullPorSimboloInvalido</span><span class="o">()</span> <span class="o">{</span>
+		
+	<span class="n">assertThatThrownBy</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"&amp;"</span><span class="o">);</span> <span class="o">})</span>
+				<span class="o">.</span><span class="na">isInstanceOf</span><span class="o">(</span><span class="n">IllegalArgumentException</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">hasMessageContaining</span><span class="o">(</span><span class="s">"operador inválido"</span><span class="o">);</span>
+				
+	<span class="n">assertThatThrownBy</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"#"</span><span class="o">);</span> <span class="o">})</span>
+				<span class="o">.</span><span class="na">isInstanceOf</span><span class="o">(</span><span class="n">IllegalArgumentException</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">hasMessageContaining</span><span class="o">(</span><span class="s">"operador inválido"</span><span class="o">);</span>
+				
+	<span class="n">assertThatThrownBy</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"@"</span><span class="o">);</span> <span class="o">})</span>
+				<span class="o">.</span><span class="na">isInstanceOf</span><span class="o">(</span><span class="n">IllegalArgumentException</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">hasMessageContaining</span><span class="o">(</span><span class="s">"operador inválido"</span><span class="o">);</span>
+				
+	<span class="n">assertThatThrownBy</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="s">"("</span><span class="o">);</span> <span class="o">})</span>
+				<span class="o">.</span><span class="na">isInstanceOf</span><span class="o">(</span><span class="n">IllegalArgumentException</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">hasMessageContaining</span><span class="o">(</span><span class="s">"operador inválido"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>O que fizemos agora é validar no teste para que quando executarmos o método <code class="highlighter-rouge">toEnum</code> passando um simbolo invalido, será lançada uma exceção <code class="highlighter-rouge">IllegalArgumentException</code> contendo na mensagem de erro o trecho <code class="highlighter-rouge">operador inválido</code> .</p>
+
+<p>O teste irá passar, tudo voltará a funcionar mas não ficou legal. Perceba que temos muita coisa se repetindo. É hora de refatorar novamente.</p>
+
+<p>Veja agora como ficou retirando todo código repetido:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testDeveRetornarNullPorSimboloInvalido</span><span class="o">()</span> <span class="o">{</span>
+	<span class="n">assertThatError</span><span class="o">(</span><span class="s">"&amp;"</span><span class="o">);</span>
+	<span class="n">assertThatError</span><span class="o">(</span><span class="s">"#"</span><span class="o">);</span>
+	<span class="n">assertThatError</span><span class="o">(</span><span class="s">"@"</span><span class="o">);</span>
+	<span class="n">assertThatError</span><span class="o">(</span><span class="s">"("</span><span class="o">);</span>	
+<span class="o">}</span>
+	
+	
+<span class="kd">private</span> <span class="kt">void</span> <span class="nf">assertThatError</span><span class="o">(</span><span class="n">String</span> <span class="n">simbolo</span><span class="o">)</span> <span class="o">{</span>
+	<span class="n">assertThatThrownBy</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span> <span class="n">Operador</span><span class="o">.</span><span class="na">toEnum</span><span class="o">(</span><span class="n">simbolo</span><span class="o">);</span> <span class="o">})</span>
+				<span class="o">.</span><span class="na">isInstanceOf</span><span class="o">(</span><span class="n">IllegalArgumentException</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">hasMessageContaining</span><span class="o">(</span><span class="s">"operador inválido"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>Criamos um novo método <code class="highlighter-rouge">assertThatError(String simbolo)</code> que isola todo o código que se repetia, passando por parâmetro o simbolo que desejamos testar.</p>
+
+<p>É, fizemos bastante coisa até aqui, foi um post e tanto, mas você percebeu o quanto é legal ir refatorando nosso código até chegar numa versão que achamos ser a melhor. Pode ser que você olhe o código como está e queira modificar algo, vamos lá, siga em frente, mas lembre-se de executar os testes a cada mudança para garantir que tudo permaneça funcionando.</p>
+
+<p>Se você chegou até aqui, obrigado. Continuamos no próximo post.</p>
+
+<p>Até {}!</p>
+
+  </div>
+
+  <footer class="postNavigation">
+  
+    <a class="postPrev" href="/spring-boot/2018/04/17/matematica-play-user-story-requisitos-do-usuario.html">
+        &laquo; Matemática Play - User Story Requisitos do usuário
+    </a>
+  
+  
+    <a class="postNext" href="/spring-boot/2018/04/17/matematica-play-adicionando-logica-a-classe-operacao.html">
+        Matemática Play - Adicionando lógica a classe Operação &raquo;
+    </a>
+  
+
+  </footer>
+
+</article>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://http-brunoluz-com-br.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading small-site-title">Bruno Luz</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list footer-content">
+          <li>Powered By <a href="http://github.com/hemangsk/Gravity">Gravity</a></li>
+          <li>Made with <i class="fa fa-heart"></i> on <a href="http://jekyllrb.com"><span>{ { Jekyll } }</a></span></li>
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2 footer-content">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bstk" target="_blank"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">bstk</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://www.facebook.com/kuiiz.brunoluz" target="_blank"><span class="icon icon--github"> <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 500 500" height="500px" id="Layer_1" version="1.1" viewBox="0 0 500 500" width="500px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M31.949,431.711c0,20.078,16.264,36.34,36.34,36.34h363.421  c20.078,0,36.34-16.262,36.34-36.34V68.29c0-20.077-16.262-36.34-36.34-36.34H68.29c-20.077,0-36.34,16.264-36.34,36.34V431.711z   M259.086,413.538V268.172h-36.342v-54.514h36.342c0-93.671,3.993-99.939,118.112-99.939v54.513  c-60.149,0-54.514,3.362-54.514,45.427h54.514v54.514h-54.514v145.366H259.086z" fill="#010101" fill-rule="evenodd"/></svg></span><span class="username"> brunoluz</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3 site-description">
+        <p>Programmer | Code</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'http-brunoluz-com-br';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+
+  </body>
+
+</html>

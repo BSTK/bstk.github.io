@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Matemática Play - Aprendendo micro-serviços com Spring Boot</title>
+  <meta name="description" content="Se você é um desenvolvedor Java assim como eu já deve ter ouvido falar em Spring Boot e  micro-serviços e com certeza já deve ter mexido muito com o ecossist...">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Source+Sans+Pro:400,700,200,300|Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="http://brunoluz.com.br/spring-boot/2018/04/15/matematica-play-aprendendo-micro-servicos-com-spring-boot.html">
+  <link rel="alternate" type="application/rss+xml" title="Bruno Luz" href="http://brunoluz.com.br/feed.xml">
+</head>
+
+
+  <body class=" light  ">
+
+    
+<div class="wrapper">
+  <center> <a href="/"><div class="site-title">   Bruno Luz </div></a></center>
+</div>
+<div class="wrapper site-description">
+<center>  Programmer | Code </center>
+</div>
+<div class="wrapper">
+  <div class="trigger site-navigation">
+    <a class="page-link" href="http://brunoluz.com.br">HOME</a>
+
+    
+    
+    
+    
+    
+    
+
+      <span class="exclamationMark">/</span>
+      <a class="page-link" href="/sobre">
+        Sobre
+      </a>
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline"><a class="post-title-link"  href="/spring-boot/2018/04/15/matematica-play-aprendendo-micro-servicos-com-spring-boot.html">Matemática Play - Aprendendo micro-serviços com Spring Boot</a></h1>
+  <center>  <p class="post-meta"><time datetime="2018-04-14T15:30:00-03:00" itemprop="datePublished">Apr 15, 2018</time></p>
+    
+   </center>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Se você é um desenvolvedor Java assim como eu já deve ter ouvido falar em <strong>Spring Boot</strong> e  <strong>micro-serviços</strong> e com certeza já deve ter mexido muito com o ecossistema <strong>Spring</strong>.Que tal aprender os dois juntos e muitas outras coisas enquanto desenvolvemos uma plataforma gamificada ?</p>
+
+<h2 id="matemática-play">Matemática Play</h2>
+
+<p><strong>Matemática Play</strong> é um aplicativo que estou desenvolvendo afim de aplicar os conhecimentos adquiridos no estudo sobre : <strong>Construindo micro-serviços com Spring Boot</strong>.</p>
+
+<p>Seu funcionamento é bem simples : Uma plataforma gamificada onde tentaremos acertar o máximo de operações matemáticas possivéis. Você terá cerca de 5 segundos para resolver algo do tipo <strong>18 x 92 = ?</strong> ou <strong>73 - 18 = ?</strong> (Olha ! Não vale usar a calculadora. É trapaça !).</p>
+
+<p>No decorrer do jogo as coisas vão se complicar um pouquinho e você será tentado a se tornar o melhor em resolver estes tipos de operações, ficando assim o máximo de tempo na lista dos 10 melhores jogadores. Teremos pontuação, badges/insígnias, rankings e muito mais.</p>
+
+<p>Gostou da ideia ? Que tal dar uma passadinha rápida e já ir jogando. Acesse o link : <a href="https://matematica-play.herokuapp.com/">Matemática Play</a>.</p>
+<blockquote>
+  <p>Nota : Só lembrando que este aplicativo ainda está em desenvolvimento, então coisas inconvenientes e erros grosseiros podem acontecer</p>
+</blockquote>
+
+<h2 id="tecnologias-utilizadas">Tecnologias utilizadas</h2>
+
+<p>Farei todo o desenvolvimento do app utilizando uma abordagem RESTFul e todo ferramental que o <strong>Spring</strong> nos oferece. Segue abaixo uma lista de ferramentas que iremos usar :</p>
+
+<ul>
+  <li>
+    <p><strong>Java (8)</strong> : A linguagem principal no qual será escrito nosso aplicativo. Iremos usar Java na sua versão 8</p>
+  </li>
+  <li>
+    <p><strong>Spring Boot</strong> : Para facilitar a criação de aplicativos independentes baseados no framework Spring, que você pode executar de maneira rápida e objetiva.</p>
+  </li>
+  <li>
+    <p><strong>RabbitMQ</strong> : Serviço de fila (message-broker) open source escrito em Erlang que implementa o protocolo AMQP (Advanced Message Queuing Protocol).</p>
+  </li>
+  <li>
+    <p><strong>Eureka</strong> : Serviço baseado em REST que é usado principalmente na nuvem da AWS para localizar serviços com o objetivo de balanceamento de carga e de servidores de camada intermediária.</p>
+  </li>
+  <li>
+    <p><strong>Ribbon</strong> : Uma biblioteca Inter Process Communication (chamadas de procedimento remoto) com balanceadores de carga de software incorporados. O modelo de uso principal envolve chamadas REST com suporte a vários esquemas de serialização.</p>
+  </li>
+  <li>
+    <p><strong>Zuul</strong> : Serviço que fornece roteamento dinâmico, monitoramento, resiliência e segurança.</p>
+  </li>
+  <li>
+    <p><strong>JUnit</strong> : Framework open-source para criação de testes unitários na linguagem de programação Java.</p>
+  </li>
+  <li>
+    <p><strong>Mockito</strong> : Framework que irá auxilizar nos testes unitários para construção de mocks (objetos simulados).</p>
+  </li>
+  <li>
+    <p><strong>Cucumber</strong> : Framework que nos auxiliará no desenvolvimento de testes de aceitação automatizados escritos em um estilo de desenvolvimento orientado a comportamento (BDD)</p>
+  </li>
+  <li>
+    <p><strong>Bootstrap</strong> :  Framework web open source para desenvolvimento de componentes visuais  para sites e aplicações web usando HTML, CSS e JavaScript</p>
+  </li>
+  <li>
+    <p><strong>Heroku</strong>: Plataforma como serviço (PaaS) que permite aos desenvolvedores criar, executar e operar aplicativos inteiramente na nuvem. É no Heroku que hospedo o Matemática Play.</p>
+  </li>
+</ul>
+
+<p>E muitos outros que não estão listados aqui mas que com certeza aparecerá em algum momento.</p>
+
+<p>Se você chegou até aqui, obrigado. Continuamos no próximo post.</p>
+
+<p>Até {}!</p>
+
+
+  </div>
+
+  <footer class="postNavigation">
+  
+  
+    <a class="postNext" href="/spring-boot/2018/04/16/matematica-play-vamos-comecar.html">
+        Matemática Play - Vamos começar ? &raquo;
+    </a>
+  
+
+  </footer>
+
+</article>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://http-brunoluz-com-br.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading small-site-title">Bruno Luz</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list footer-content">
+          <li>Powered By <a href="http://github.com/hemangsk/Gravity">Gravity</a></li>
+          <li>Made with <i class="fa fa-heart"></i> on <a href="http://jekyllrb.com"><span>{ { Jekyll } }</a></span></li>
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2 footer-content">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bstk" target="_blank"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">bstk</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://www.facebook.com/kuiiz.brunoluz" target="_blank"><span class="icon icon--github"> <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 500 500" height="500px" id="Layer_1" version="1.1" viewBox="0 0 500 500" width="500px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path clip-rule="evenodd" d="M31.949,431.711c0,20.078,16.264,36.34,36.34,36.34h363.421  c20.078,0,36.34-16.262,36.34-36.34V68.29c0-20.077-16.262-36.34-36.34-36.34H68.29c-20.077,0-36.34,16.264-36.34,36.34V431.711z   M259.086,413.538V268.172h-36.342v-54.514h36.342c0-93.671,3.993-99.939,118.112-99.939v54.513  c-60.149,0-54.514,3.362-54.514,45.427h54.514v54.514h-54.514v145.366H259.086z" fill="#010101" fill-rule="evenodd"/></svg></span><span class="username"> brunoluz</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3 site-description">
+        <p>Programmer | Code</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'http-brunoluz-com-br';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+
+  </body>
+
+</html>
