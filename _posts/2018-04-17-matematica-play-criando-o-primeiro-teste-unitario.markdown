@@ -149,6 +149,8 @@ Criamos um novo método ```assertThatError(String simbolo)``` que isola todo o c
 
 É, fizemos bastante coisa até aqui, foi um post e tanto, mas você percebeu o quanto é legal ir refatorando nosso código até chegar numa versão que achamos ser a melhor. Pode ser que você olhe o código como está e queira modificar algo, vamos lá, siga em frente, mas lembre-se de executar os testes a cada mudança para garantir que tudo permaneça funcionando.
 
+Da uma passada lá no [GitHub](https://github.com/BSTK/matematica-play) e veja como está ficando !
+
 Se você chegou até aqui, obrigado. Continuamos no próximo post.
 
 Até {}!

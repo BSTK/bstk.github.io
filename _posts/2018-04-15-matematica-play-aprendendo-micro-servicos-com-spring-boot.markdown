@@ -52,6 +52,8 @@ Farei todo o desenvolvimento do app utilizando uma abordagem RESTFul e todo ferr
 
 E muitos outros que não estão listados aqui mas que com certeza aparecerá em algum momento.
 
+Da uma passada lá no [GitHub](https://github.com/BSTK/matematica-play) e veja como está ficando !
+
 Se você chegou até aqui, obrigado. Continuamos no próximo post.
 
 Até {}!
