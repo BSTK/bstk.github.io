@@ -8,7 +8,9 @@ permalink: /matematica-play
 
 Matemática Play é um aplicativo que estou desenvolvendo afim de aplicar os conhecimentos adquiridos no estudo sobre : Construindo micro-serviços com Spring Boot.
 
-Veja aqui em ordem os post da série :
+Gostou da ideia ? Que tal dar uma passadinha rápida e já ir jogando. [Matemática Play](https://matematica-play.herokuapp.com/)
+
+Acompanhe a série :
 
 Capitulo 1 - [Matemática Play - Aprendendo micro-serviços com Spring Boot](http://brunoluz.com.br/spring-boot/2018/04/14/matematica-play-aprendendo-micro-servicos-com-spring-boot.html)
 
