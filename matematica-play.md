@@ -4,7 +4,7 @@ title : Matemática Play
 permalink: /matematica-play
 ---
 
-<h2>Matemática Play - Aprendendo micro-serviços com Spring Boot</h2>
+# Matemática Play - Aprendendo micro-serviços com Spring Boot
 
 Matemática Play é um aplicativo que estou desenvolvendo afim de aplicar os conhecimentos adquiridos no estudo sobre : Construindo micro-serviços com Spring Boot.
 
