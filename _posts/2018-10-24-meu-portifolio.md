@@ -4,7 +4,7 @@ title:  "Meu Portifólio"
 date:   2018-10-24 17:10:00 +0530
 ---
 
-Muitas vezes vejo nos grupos de desenvolvimento do Facebook uma galera que já sabe a base de Java, POO, Banco de Dados, desenvolvimento Web em geral (html/css/js) comentando como criar um portifólio para mostar o que já desenvolveu ou até mesmo os que já fizeram vários cursos mas ainda não colocaram um projeto completo no ar, funcionando para que outras pessoas possam acessar.
+Muitas vezes vejo nos grupos de desenvolvimento do Facebook uma galera que já sabe a base de Java, POO, Banco de Dados, desenvolvimento web em geral (html/css/js) comentando como criar um portifólio para mostar o que já desenvolveu ou até mesmo os que já fizeram vários cursos mas ainda não colocaram um projeto completo no ar, funcionando para que outras pessoas possam acessar.
 
 Bom, pensando nisso estarei com vocês nessa jornada de **criarmos nosso portifólio** juntamente com projetos completos que simulam vários sistemas que já usamos no nosso dia-a-dia.
 
@@ -46,8 +46,8 @@ Desta vez iremos construir uma aplicação que simule Twitter e suas principais 
 Agora é hora de mais um desafio: Meu Financeiro, nosso aplicativo que simulará uma plataforma de finanças pessoais.
 
 ### Tecnologias utilizadas 
-    - Frontend: HTML5, Bulma, Angular
     - Java 8
+    - Frontend: HTML5, Bulma, Angular
     - Backend: API Rest com Spring Boot, Spring Test, Postman, Swagger
 
 
