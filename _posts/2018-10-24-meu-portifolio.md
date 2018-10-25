@@ -11,7 +11,7 @@ Bom, pensando nisso estarei com vocês nessa jornada para **criarmos nosso porti
 
 ## O que iremos fazer ?
 
-Nessa jornada, vamos criar três aplicativos da web onde o intuito será treinar nossas habilidades de programação e diversas das tecnologias que vemos nos anúncios de empregos, nos fórums, nos grupos de desenvolvimento e etc.
+Nessa jornada, vamos criar três aplicativos da web onde o intuito será treinar nossas habilidades de programação e diversas das tecnologias que vemos nos anúncios de empregos, nos fóruns, nos grupos de desenvolvimento e etc.
 
 
 ## CarMais
@@ -59,7 +59,7 @@ O intuito é aprender as diversas tecnologias disponíveis, por isso não iremos
 
 
 
-## Iremos precisar de ...
+## Iremos precisar de
 
     - Uma conta no GitHub
     - Uma conta no Heroku
