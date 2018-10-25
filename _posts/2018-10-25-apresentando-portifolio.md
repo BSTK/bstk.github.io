@@ -15,7 +15,7 @@ Que saber como ficou, perde tempo não ... Acesse ai e veja o resultado.
 
 [Meu Portifolio, hospedado no Heroku](https://meu-portifolio.herokuapp.com/)
 
-###Não deixe de acompanhar o video no canal do YouTube
+### Não deixe de acompanhar o video no canal do YouTube
 
 [#01- Apresentando o portfólio](https://www.youtube.com/watch?v=DEBsUItDm30)
 
