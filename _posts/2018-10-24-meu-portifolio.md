@@ -68,12 +68,11 @@ Abaixo, deixo alguns links explicando como criar sua conta e como usar o GitHub 
 
 
 
-[GitHub | Guia Completo do Iniciante](https://www.youtube.com/watch?v=UbJLOn1PAKw)
-
 [Fazendo Deploy no Heroku](https://www.youtube.com/watch?v=kY4u39a6Ueg)
 
 [Aplicação Spring Boot no Heroku: como fazer deploy de uma API RESTful](https://www.youtube.com/watch?v=dusvP0CFisw)
 
+[GitHub | Guia Completo do Iniciante](https://www.youtube.com/watch?v=UbJLOn1PAKw)
 
 
 Então, mãos a obra !
