@@ -66,9 +66,7 @@ O intuito é aprender as diversas tecnologias disponíveis, por isso não iremos
 Abaixo, deixo alguns links explicando como criar sua conta e como usar o GitHub e Heroku :
 
 [GitHub | Guia Completo do Iniciante](https://www.youtube.com/watch?v=UbJLOn1PAKw)
-
 [Fazendo Deploy no Heroku](https://www.youtube.com/watch?v=kY4u39a6Ueg)
-
 [Aplicação Spring Boot no Heroku: como fazer deploy de uma API RESTful](https://www.youtube.com/watch?v=dusvP0CFisw)
 
 
