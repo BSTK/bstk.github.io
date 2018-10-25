@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Meu Portifólio"
-date:   2018-10-24 17:10:00 +0530
+title: Meu Portifólio
+date: '2018-10-24 17:10:00 +0530'
+published: true
 ---
 
 Muitas vezes vejo nos grupos de desenvolvimento do Facebook uma galera que já sabe a base de Java, POO, Banco de Dados, desenvolvimento web em geral (html/css/js) comentando como criar um portifólio para mostar o que já desenvolveu ou até mesmo os que já fizeram vários cursos mas ainda não colocaram um projeto completo no ar, funcionando para que outras pessoas pudessem acessar.
@@ -10,7 +11,7 @@ Bom, pensando nisso estarei com vocês nessa jornada para **criarmos nosso porti
 
 ## O que iremos fazer ?
 
-Nessa jornada, vamos criar três aplicativos da web onde o intuito será treinar nossas habilidades de programação e diversas das tecnologias que vemos nos anúncios de empregos, nos fórums, nos grupos de desenvolvimento e etc.
+Nessa jornada, vamos criar três aplicativos da web onde o intuito será treinar nossas habilidades de programação e diversas das tecnologias que vemos nos anúncios de empregos, nos fóruns, nos grupos de desenvolvimento e etc.
 
 
 ## CarMais
@@ -58,7 +59,7 @@ O intuito é aprender as diversas tecnologias disponíveis, por isso não iremos
 
 
 
-## Iremos precisar de ...
+## Iremos precisar de
 
     - Uma conta no GitHub
     - Uma conta no Heroku
@@ -66,8 +67,7 @@ O intuito é aprender as diversas tecnologias disponíveis, por isso não iremos
 Abaixo, deixo alguns links explicando como criar sua conta e como usar o GitHub e Heroku :
 
 
-
-[GitHub | Guia Completo do Iniciante](https://www.youtube.com/watch?v=UbJLOn1PAKw)
+[GitHub Guia Completo do Iniciante](https://www.youtube.com/watch?v=UbJLOn1PAKw)
 
 [Fazendo Deploy no Heroku](https://www.youtube.com/watch?v=kY4u39a6Ueg)
 
