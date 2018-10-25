@@ -75,7 +75,7 @@ Abaixo, deixo alguns links explicando como criar sua conta e como usar o GitHub 
 
 
 
-###Não deixe de acompanhar o video no canal do YouTube
+### Não deixe de acompanhar o video no canal do YouTube
 
 [#00 - Meu Portfólio](https://www.youtube.com/watch?v=0nNY6Y1uhak&t)
 
