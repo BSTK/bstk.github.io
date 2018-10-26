@@ -13,7 +13,7 @@ Veja que ele consiste apenas de :
 
 A estrutura ficou desta forma :
 
-AQUI VEM A IMAGEM
+![estrutura-do-projeto](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/estrutura-do-projeto.png)
 
 ## Onde estão esses aquivos ?
 
@@ -27,12 +27,14 @@ Acesse o repositório :
 
 Legal, agora que você copiou os arquivos e os colocou no lugar certo como mostrado no video (link no final do post), seu site estatico deve está igual a imagem abaixo :
 
+![meu-protifolio-localhost](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/meu-protifolio-localhost.png)
 
-Que saber como ficou, perde tempo não ... Acesse ai e veja o resultado:
+
+
+
+Acesse ai e veja o resultado:
 
 [Meu Portifolio, hospedado no Heroku](https://meu-portifolio.herokuapp.com/)
-
-AQUI VEM A IMAGEM
 
 
 ### Não deixe de acompanhar o video no canal do YouTube
