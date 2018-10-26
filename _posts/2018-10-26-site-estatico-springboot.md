@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Construindo sistes estaticos com Spring Boot"
+title:  "Construindo sites estaticos com Spring Boot"
 date:   2018-10-26 10:00:00 +0530
 ---
 
