@@ -25,10 +25,14 @@ Acesse o repositório :
 [BSTK/meu-portifolio-arquivos](https://github.com/BSTK/meu-portifolio-arquivos)
 
 
+Legal, agora que você copiou os arquivos e os colocou no lugar certo como mostrado no video (link no final do post), seu site estatico deve está igual a imagem abaixo :
+
+
 Que saber como ficou, perde tempo não ... Acesse ai e veja o resultado:
 
 [Meu Portifolio, hospedado no Heroku](https://meu-portifolio.herokuapp.com/)
 
+AQUI VEM A IMAGEM
 
 
 ### Não deixe de acompanhar o video no canal do YouTube
