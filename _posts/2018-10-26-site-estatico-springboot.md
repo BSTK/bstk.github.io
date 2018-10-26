@@ -7,6 +7,7 @@ date:   2018-10-26 10:00:00 +0530
 Dessa vez vamos criar um site estático com **Spring Boot** que servirá apenas para listar os principais projetos que desenvolveremos ao longo do caminho. Não há nada de mais aqui.
 
 Veja que ele consiste apenas de :
+
     - uma pagina html estática (index.html)
     - um estilo css para deixar o site mais bonito (style.css)
     - uma imagem que no momento serve apenas como islustração (img.png)
