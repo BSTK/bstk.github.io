@@ -40,7 +40,7 @@ Acesse ai e veja o resultado:
 
 ### Não deixe de acompanhar o video no canal do YouTube
 
-[#01- Apresentando o portfólio](https://www.youtube.com/watch?v=DEBsUItDm30)
+[#02 - Sites estáticos com Spring Boot](https://youtu.be/ZyAjyX89wDc)
 
 Até mais !
 
