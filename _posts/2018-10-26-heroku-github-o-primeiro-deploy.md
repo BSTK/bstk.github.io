@@ -11,7 +11,7 @@ Se você está acompanhando a série e fez tudo como apresentado nos videos até
 
 ## Heroku
 
-Heroku é uma plataforma em nuvem no estilo **PAAS** (Plataforma como serviço) e com ele temos disponivél um ambiente completa para **deployar /-:** nossas aplicações que podem ser desenvolvidas nas mais diversas linguagens.
+Heroku é uma plataforma em nuvem no estilo **PAAS** (Plataforma como serviço) e com ele temos disponivél um ambiente completo para **'deployar /-:'** nossas aplicações que podem ser desenvolvidas nas mais diversas linguagens.
 
 Como a idéia é foco no desenvolvimento, não será abordado a criação da conta no Heroku, mas deixarei no final do post links que vão te mostar como criar sua conta.
 
