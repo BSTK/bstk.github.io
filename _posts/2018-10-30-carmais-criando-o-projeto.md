@@ -18,7 +18,7 @@ O mínimo que precisamos no **web.xml** e uma tag de abertura e fechamento `<web
 
 Para nossa configuração, o **web.xml** ficou dessa forma :
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
@@ -55,7 +55,7 @@ Para nossa configuração, o **web.xml** ficou dessa forma :
 	</resource-env-ref>
 	
 </web-app>
-{% endhighlight %}
+```
 
 ## faces-config.xml
 
@@ -64,14 +64,13 @@ Também localizado na pasta **webapp/WEB-INF** o arquivo **faces-config.xml** é
 
 Para nossa configuração, o **faces-config.xml** ficou dessa forma :
 
-{% highlight xml %}
+```xml
 <?xml version="1.0"?>
 <faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
-
 </faces-config>
-{% endhighlight %}
+```
 
 ## context.xml
 
@@ -80,7 +79,7 @@ Localizado na pasta **webapp/META-INF**, usamos este apenas para fazer com que o
 
 Para nossa configuração, o **context.xml** ficou dessa forma :
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
     <Manager pathname=""/>
@@ -88,7 +87,7 @@ Para nossa configuração, o **context.xml** ficou dessa forma :
         type="javax.enterprise.inject.spi.BeanManager" 
         factory="org.jboss.weld.resources.ManagerObjectFactory"/>
 </Context>
-{% endhighlig %}
+```
 
 ## beans.xml
 
@@ -97,14 +96,14 @@ Localizado na paste **resources/META-INF**, este arquivo serve para habilitar o 
 
 Para nossa configuração, o **beans.xml** ficou dessa forma :
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
        version="1.1" bean-discovery-mode="all">      
 </beans>
-{% endhighlig %}
+```
 
 ## pom.xml
 
@@ -113,7 +112,7 @@ O **pom.xml** (Project Object Model - Modelo de Objeto do Projeto) está localiz
 
 Para nossa configuração, o **pom.xml** ficou dessa forma :
 
-{% highlight xml %}
+```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -229,10 +228,8 @@ Para nossa configuração, o **pom.xml** ficou dessa forma :
 		</plugins>
 	
 	</build>
-	
 </project>
-{% endhighlig %}
-
+```
 
 O post ficou meio longo devido ao conteúdo dos arquivos de configuração, mas está ai tudo que você precisa para acompanhar o vídeo sem ter muita dor de cabeça procurando por configurações.
 
