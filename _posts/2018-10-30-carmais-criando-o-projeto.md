@@ -5,10 +5,10 @@ date:   2018-10-30 18:00:00 +0530
 ---
 
 Chegou a hora de colocar a mão no código e começar a dar vida ao nosso web app **Carmais**.
-Neste vídeo é abordada toda a parte de configuração incial do projeto bem como a definição de algumas das dependências (maven) principais. 
+Neste vídeo é abordada toda a parte de configuração incial do projeto bem como a definição de algumas dependências (maven) principais. 
 
 
-Como mexemos em muitos arquivos de configuração, abaixo vou listar todos eles bem como seu conteúdo
+Como serão em muitos arquivos de configuração, segue a explicação de cada um deles bem como seu conteúdo.
 
 ## web.xml
 
@@ -235,11 +235,11 @@ O post ficou meio longo devido ao conteúdo dos arquivos de configuração, mas 
 
 ## Links úties
 
-[Repositório no Github]()
+[Repositório no Github](https://github.com/BSTK/carmais)
 
 ### Não deixe de acompanhar o video no canal do YouTube
 
-[#04 - Carmais - Criando projeto]()
+[#04 - Carmais - Criando projeto](https://youtu.be/x1P658BjPF8)
 
 Até mais !
 
