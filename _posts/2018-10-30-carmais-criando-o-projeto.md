@@ -88,7 +88,7 @@ Para nossa configuração, o **context.xml** ficou dessa forma :
         type="javax.enterprise.inject.spi.BeanManager" 
         factory="org.jboss.weld.resources.ManagerObjectFactory"/>
 </Context>
-{% endhighlig
+{% endhighlig %}
 
 ## beans.xml
 
@@ -104,7 +104,7 @@ Para nossa configuração, o **beans.xml** ficou dessa forma :
        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
        version="1.1" bean-discovery-mode="all">      
 </beans>
-{% endhighlig
+{% endhighlig %}
 
 ## pom.xml
 
@@ -231,7 +231,7 @@ Para nossa configuração, o **pom.xml** ficou dessa forma :
 	</build>
 	
 </project>
-{% endhighlig
+{% endhighlig %}
 
 
 O post ficou meio longo devido ao conteúdo dos arquivos de configuração, mas está ai tudo que você precisa para acompanhar o vídeo sem ter muita dor de cabeça procurando por configurações.
