@@ -5,7 +5,7 @@ date:   2018-10-30 18:00:00 +0530
 ---
 
 Chegou a hora de colocar a mão no código e começar a dar vida ao nosso web app **Carmais**.
-Neste vídeo é abordada toda a parte de configuração incial do projeto bem como a definição de algumas dependências (maven) principais. 
+Neste vídeo é abordada toda a parte de configuração inicial do projeto bem como a definição de algumas dependências (maven)principais. 
 
 
 Como serão em muitos arquivos de configuração, segue a explicação de cada um deles bem como seu conteúdo.
