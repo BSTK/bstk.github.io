@@ -18,6 +18,8 @@ Caminho : ```carmais > Properties > Prject Facets```
 
 ## Código do home.xhtml
 
+Veja como ficou o código do nosso ```home.xhtml```
+
 ``` xhtml
 <!DOCTYPE html> 
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -36,6 +38,9 @@ Caminho : ```carmais > Properties > Prject Facets```
 ```
 
 ## Código do HomeController
+
+Veja como ficou o código do nosso ```HomeController```
+
 ``` java
 @Named
 @ViewScoped
