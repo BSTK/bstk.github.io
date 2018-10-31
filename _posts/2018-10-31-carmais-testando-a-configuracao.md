@@ -4,7 +4,7 @@ title:  "Carmais - Testando a configuração"
 date:   2018-10-31 18:00:00 +0530
 ---
 
-Depois de configurar vários arquivos ```xml```, vamos testar nosso web app para ver se tudo que fizemos saiu de forma correta e que seja possível executa-lo no Tomcat.
+Depois de configurar vários arquivos ```xml```, vamos testar nosso web app para ver se tudo que fizemos saiu de forma correta para que possa ser executado Tomcat.
 
 Nada de muito complicado será feito nesta aula, apenas o teste básico da configuração.
 
