@@ -35,7 +35,7 @@ O resultado ficará igual na imagem acima e claro, estamos fazendo o template en
 
 ### Não deixe de acompanhar o video no canal do YouTube
 
-[#06 - Carmais - Iniciando o template](https://youtu.be/GxatXImKJy8)
+[#06 - Carmais - Iniciando o template](https://youtu.be/yN5LAYoFtP4)
 
 Até mais !
 
