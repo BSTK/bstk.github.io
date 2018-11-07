@@ -4,7 +4,7 @@ title:  "Carmais - Iniciando o template"
 date:   2018-11-06 18:00:00 +0530
 ---
 
-É hora de dar vida ao projeto. Vamos iniciar a criação do template que será utilizado pela área administrativa de nosso app. Eu decidi utilizar o ```adminLTE```, bem conhecido na web e bastante utilizado.
+É hora de dar vida ao projeto. Vamos iniciar a criação do template que será utilizado pela área administrativa do nosso app. Eu decidi utilizar o ```adminLTE```, bem conhecido na web e bastante utilizado.
 
 
 ## AdminLTE
