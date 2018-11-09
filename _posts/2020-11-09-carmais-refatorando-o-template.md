@@ -13,21 +13,17 @@ Nesse tarefa de refatorar vamos organizar nossa estrutura (x)html para dar um ar
 
 ```Menos``` código é ```mais``` fácil de manter, é mais fácil de se achar e muito mais organizado. Foi o que fizemos, separamos nosso html em novos arquivos para que cada um fizesse aquile que fosse de sua responsabilidade.
 
-    > **header.xhtml** : Aqui ficará todo html que renderiza o header de nossa aplicação. Basicamente uma navbar
+> **header.xhtml** : Aqui ficará todo html que renderiza o header de nossa aplicação. Basicamente uma navbar
+![header.png](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/header.png)
 
-    ![header.png](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/header.png)
+> **menu.xhtml**  : Deixamos aqui o html responsavél pela renderização do menu, neste caso uma ```aside```
+![menu.png](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/menu.png)
 
-    > **menu.xhtml**  : Deixamos aqui o html responsavél pela renderização do menu, neste caso uma ```aside```
+> **footer.xhtml** : E aqui todo html referente ao footer
+![footer.png](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/footer.png)
 
-    ![menu.png](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/menu.png)
-
-    > **footer.xhtml** : E aqui todo html referente ao footer
-
-    ![footer.png](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/footer.png)
-
-    > **principal.xhtml** : Este é o responsavél por ser nosso ```template``` de fato. Foi nele onde juntamos todos os demais arquivos num só. 
-
-    ![principal.png](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/principal.png)
+> **principal.xhtml** : Este é o responsavél por ser nosso ```template``` de fato. Foi nele onde juntamos todos os demais arquivos num só. 
+![principal.png](https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/principal.png)
 
 
 ## Rascunhos
