@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Carmais - Continuando a refatoracao do template"
+title:  "Carmais - Continuando a refatoração do template"
 date:   2018-11-16 17:00:00 +0530
 ---
 
