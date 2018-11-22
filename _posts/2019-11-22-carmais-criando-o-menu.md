@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Carmais - Continuando a refatoração do template"
+title:  "Carmais - Criando o menu"
 date:   2018-11-22 17:00:00 +0530
 ---
 
@@ -58,7 +58,7 @@ Não podemos nos esquecer que deixamos um **bug** neste menu, porém não se pre
 
 [#10 - Carmais - Criando o menu](https://youtu.be/URL-AQUI)
 
-[#11 - Carmais - Continuando a refatoração do template](https://youtu.be/URL-AQUI)
+[#11 - Carmais - Adicionando itens ao menu](https://youtu.be/URL-AQUI)
 
 Até mais !
 
