@@ -66,7 +66,9 @@ Dessa forma fica fácil criar e utilizar os templates com JSF e Facelets.
 
 ### Não deixe de acompanhar o video no canal do YouTube
 
-[#08 - Carmais - Continuando a refatoração do template](https://youtu.be/URL-AQUI)
+[#08 - Carmais - Continuando a refatoração do template](https://youtu.be/KwDgRLHeTG8)
+
+[#09 - Carmais - Usando o template](https://youtu.be/Z1V96zeGxFs)
 
 Até mais !
 
