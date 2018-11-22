@@ -56,9 +56,9 @@ Não podemos nos esquecer que deixamos um **bug** neste menu, porém não se pre
 
 ### Não deixe de acompanhar o video no canal do YouTube
 
-[#10 - Carmais - Criando o menu](https://youtu.be/URL-AQUI)
+[#10 - Carmais - Criando o menu](https://youtu.be/0e1kvxKFLI8)
 
-[#11 - Carmais - Adicionando itens ao menu](https://youtu.be/URL-AQUI)
+[#11 - Carmais - Adicionando itens ao menu](https://youtu.be/29ZCVmf93Rs)
 
 Até mais !
 
