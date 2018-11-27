@@ -38,23 +38,23 @@ public void inicializar() {
 
 ```
 
-Agora veja como ficou a nova o xhtml
+Agora veja como ficou o novo xhtml
 
 ```xml
 <!-- menu.xhtml -->
  ...
 
 <h:form prependId="false">  
-	<ul class="sidebar-menu" data-widget="tree">
-	    <ui:repeat var="item" value="#{ menuController.menu.itens }">
-			<li class="treeview">
-				<h:commandLink action="#{ menuController.navegarPara(item.url) }">
-					<i class="#{ item.cssIcone }"></i>
-					<span>#{ item.label }</span>
-				</h:commandLink>
-			</li>
-		</ui:repeat>
-	</ul>   
+  <ul class="sidebar-menu" data-widget="tree">
+    <ui:repeat var="item" value="#{ menuController.menu.itens }">
+  	  <li class="treeview">
+  	  	<h:commandLink action="#{ menuController.navegarPara(item.url) }">
+  	  		<i class="#{ item.cssIcone }"></i>
+  	  		<span>#{ item.label }</span>
+  	  	</h:commandLink>
+  	  </li>
+  	</ui:repeat>
+  </ul>   
 </h:form>	
  ...
 
@@ -69,7 +69,7 @@ Agora não temos mais o html chumbado e sim os dados vindo do nosso código Java
 
 ### Não deixe de acompanhar o video no canal do YouTube
 
-[#12 - Carmais - Menu dinâmico](https://youtu.be/0e1kvxKFLI8)
+[#12 - Carmais - Menu dinâmico](https://youtu.be/qYVsUJDGx-c)
 
 Até mais !
 
