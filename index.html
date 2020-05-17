@@ -3,8 +3,12 @@ layout: default
 ---
 
 <div class="home">
-
-
+  <div class="post postContent">
+    <img src="https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/sito-foto-1.jpg" />
+  </div>
+  
+  <!-- LISTA DE POSTS -->
+  <!-- 
   {% for post in paginator.posts%}
   <div class="post postContent">
     <div  class="postDate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
@@ -20,8 +24,11 @@ layout: default
    {{ post.content | strip_html | truncate:200}}
     </div>
   </div>
-
   {% endfor %}
+  -->
+
+  <!-- PAGINAÇÃO PRINCIAL SITE -->
+  <!-- 
   {% if paginator.total_pages > 1 %}
     <nav class="pagination">
       {% if paginator.previous_page %}
@@ -43,7 +50,9 @@ layout: default
     {% endif %}
     </nav>
   {% endif %}
-  <!--<ul class="post-list">
+  -->
+  <!--
+    <ul class="post-list">
     {% for post in site.posts %}
       <li>
         <span class="post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -53,8 +62,7 @@ layout: default
         </h2>
       </li>
     {% endfor %}
-  </ul>-->
-
-
+  </ul>
+  -->
 
 </div>
