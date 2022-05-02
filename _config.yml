@@ -12,7 +12,7 @@ description: Programmer | Code
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://brunoluz.com.br" # the base hostname & protocol for your site
 github_username:  bstk
-facebook_user:  brunoluz
+linkedin:  Bruno Luz
 paginate: 5
 theme-dark: false #Set to true to change to dark website theme
 assets_git: "https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts"
