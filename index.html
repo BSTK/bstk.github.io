@@ -2,67 +2,27 @@
 layout: default
 ---
 
-<div class="home">
-  <div class="post postContent">
-    <img width="400" src="https://raw.githubusercontent.com/BSTK/bstk.github.io/master/asserts/img/site-foto-1.jpg" />
-  </div>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
 
-  <!-- LISTA DE POSTS -->
-  <!-- 
-  {% for post in paginator.posts%}
-  <div class="post postContent">
-    <div  class="postDate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
-    </div>
-    <div class="postTag">
-      {{post.tag}}
-    </div>
-    <br>
-    <div class="postTitle">
-    <a class='postLink' href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
-    </div>
-    <div class="postExt">
-   {{ post.content | strip_html | truncate:200}}
-    </div>
-  </div>
-  {% endfor %}
-  -->
+    <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-  <!-- PAGINAÇÃO PRINCIAL SITE -->
-  <!-- 
-  {% if paginator.total_pages > 1 %}
-    <nav class="pagination">
-      {% if paginator.previous_page %}
-        <a class="paginationLink" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-      {% endif %}
+    <div class="entry">
+      {% if post.content contains '<!--more-->' %}
 
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <em class="paginationLink paginationLinkCurrent">{{ page }}</em>
-      {% elsif page == 1 %}
-        <a class="paginationLink" href="/">{{ page }}</a>
+      {{ post.excerpt }}
+
       {% else %}
-        <a class="paginationLink" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+
+      {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
+
       {% endif %}
-    {% endfor %}
+    </div>
 
-    {% if paginator.next_page %}
-      <a class="paginationLink" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% endif %}
-    </nav>
-  {% endif %}
-  -->
-  <!--
-    <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta-main">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more&nbsp;&#183;{% include read-time.html content=post.content %}</a>
+  </article>
+  {% endfor %}
 
-        <h2>
-          <a class="post-link-main" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-  -->
-
+  {% include pagination.html %}
 </div>
