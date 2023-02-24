@@ -1,9 +1,13 @@
 ---
 layout: page
-title: About
+title: Olá
 permalink: /about
 ---
 
-Hi, Write an awesome description about your blog here.  
-Feel free to make it a bit more interesting by adding a picture or two.  
-Only limit here is your creativity and imagination. Unleash them with full force.  
+Eu sou Bruno, um programador ajudando empresas a aplicar tecnologia.
+Na medida do possivél *"tento"* ser *"um minimalista"* e ter pouco de poucas coisas.
+Nos ultimos anos tenho trabalhado remoto e prometo nunca mais trabalhar de modo presencial.
+
+Bom, é isso ai, vamos conversando!
+
+[]´s
