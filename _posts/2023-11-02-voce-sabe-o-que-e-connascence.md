@@ -99,5 +99,5 @@ Em um próximo post, continuarei falando da *Conascência Dinâmica*, que por su
 acontece apenas em *tempo de execução* é muito mais dificil de se perceber.
 
 Links:
-[Fundamentals of Software Architecture](https://fundamentalsofsoftwarearchitecture.com)
-[Connascence](https://connascence.io)
+- [Fundamentals of Software Architecture](https://fundamentalsofsoftwarearchitecture.com)
+- [Connascence](https://connascence.io)
