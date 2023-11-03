@@ -4,7 +4,7 @@ title: Connascence, uma métrica obvia mas nem tanto Pt1
 categories: [Java, Arquitetura de Software, Boas Práticas]
 ---
 
-A leitura sempre mostra coisas que nem sabemos que existe, simplesmente pelo fato de nunca ter ouvido falar ou ler sobre, mas que estavam lá só esperando para ser descoberta.
+A leitura sempre mostra coisas que nem sabemos que existe, simplesmente pelo fato de nunca ter ouvido falar ou ler sobre, mas que estavam lá só esperando para serem descobertas.
 Estou lendo o livro **Fundamentals of Software Architecture: An Engineering Approach** escrito por *Mark Richards, Neal Ford* e no terceiro
 capitulo é mostrado o conceito de **Connascence**. Venha ver o que descobri.
 
@@ -75,6 +75,7 @@ envolvendo tipos, números mágicos e etc. Também temos a opção da queria ```
 
 
 4. **Conascência de posição (CoP)** - Vários componentes devem concordar com a ordem dos valores.
+
   - Um exemplo de quando isso acontece é quando temos um método que possui dois parâmetros do mesmo tipo e que só
 pode funcionar direito se a ordem for obedecida. O código abaixo compila, irá rodar normalmente porém não funciona da maneira que deveria.
     Sim, pode parecer algo banal, bobo mas como diria um grande colega: "É raro mas acontece sempre!"
@@ -95,8 +96,8 @@ final Response responseBB = buscarDadosRelatorio("email@gmail.com", "1B");
 ambos devem produzir resultados idênticos. Obviamente isso demonstra um alto grau de acoplamento, pois se em 
 uma das parte mudar algum detalhe, a funcionalidade não irá funcionar corretamente.
 
+Como disse parece coisas obvias, pequenas, mas que acontece bastante. A medida que a base de código e
+a quantidade de desenvolvedores aumenta, a *Conascência* acaba aparecendo com certa frequência.
+
 Em um próximo post, continuarei falando da *Conascência Dinâmica*, que por sua natureza ser algo que 
 acontece apenas em *tempo de execução* é muito mais dificil de se perceber.
-
-Como disse parece coisas obvias, pequenas, mas que acontece bastante. A medida que a base de código e 
-a quantidade de desenvolvedores aumenta, a *Conascência* acaba aparecendo com certa frequência.
