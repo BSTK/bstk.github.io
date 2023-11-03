@@ -37,6 +37,17 @@ se o nome de um método mudar, os chamadores desse método deverão ser alterado
   - Aqui podemos dizer sobre o recurso comum em linguagens estaticamente tipadas de limitar variaveis e parâmetros a tipos especificos, facilmente detectado 
 pelo compilador. Em linguagens dinamicas como Python, Javascript é algo mais difícil de se perceber.
 
+{% highlight java %}
+/// Javascript
+function data(dia, mes, ano) {
+  return new Date(dia, mes, ano);
+}
+
+/// Chamada do método
+data('1', '2', "2023");
+data(1, 2, 2023);
+data([1, 2, 3], '2', {1});
+{% endhighlight %}
 
 **Conascência de Significado (CoS) ou Connascence de Convenção (CoC)** - Vários componentes devem concordar com o
 significados de valores especificos.
