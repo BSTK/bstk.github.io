@@ -73,7 +73,7 @@ class B {
 }
 {% endhighlight %}
 
-Em linguagens mais antigas que não possi um tipo de dado ```boolean```. Imagina o tanto de problemas ao inverter esses valores
+Em linguagens mais antigas que não possiu um tipo de dado ```boolean```. Imagina o tanto de problemas ao inverter esses valores
 
 {% highlight java %}
 int FALSE = 0;
@@ -92,8 +92,7 @@ pode funcionar direito se a ordem for obedecida. O código abaixo compila, irá 
 {% highlight java %}
 Response buscarDadosRelatorio(final String codigoRelatorio, final String email) { ... }
 
-final Response responseAA = buscarDadosRelatorio("1B", "email@gmail.com");
-final Response responseBB = buscarDadosRelatorio("email@gmail.com", "1B");
+final Response response = buscarDadosRelatorio("email@gmail.com", "1B");
 {% endhighlight %}
 
 > Essa parece ser mais dificil de resolver, até mesmo por se tratar do tipo de dado e algo da pŕopria linguagem.
