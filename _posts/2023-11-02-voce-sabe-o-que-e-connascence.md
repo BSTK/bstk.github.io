@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Connascence, uma métrica obvia mas nem tanto Pt1
+title: Connascence, uma métrica óbvia mas nem tanto Pt1
 categories: [Java, Arquitetura de Software, Boas Práticas]
 ---
 
@@ -8,12 +8,11 @@ A leitura sempre mostra coisas que nem sabemos que existe, simplesmente pelo fat
 Estou lendo o livro **Fundamentals of Software Architecture: An Engineering Approach** escrito por *Mark Richards, Neal Ford* e no terceiro
 capitulo é mostrado o conceito de **Connascence**. Venha ver o que descobri.
 
-Como bons dev's que somos :-), passamos boa parte do nosso tempo programando (ou deveriamos) e coisas
-que parecem ser obvias não são ta obvias assim.
+Como bons dev's que somos :-), passamos boa parte do nosso tempo programando (ou deveriamos) e coisas que parecem ser óbvias não são tão óbvias assim.
+
 Você ja ouviu falar em *"Connascence"*? Eu nunca tinha ouvido falar. Não sei se essa palavra tem tradução para o Português,
 e ao tentar traduzi-la no Google Translater, sai algo como: *"Connascência / Conascência"*.
-Bom, *Connascence* trata-se de uma "métrica de acoplamento" criada
-por Meilir Page-Jones e publicado no livro *"What Every Programmer Should Know About
+Bom, *Connascence* trata-se de uma "métrica de acoplamento" criada por Meilir Page-Jones e publicado no livro *"What Every Programmer Should Know About
 Object-Oriented Design"* de 1996.
 
 De modo geral, significa:
@@ -21,16 +20,13 @@ De modo geral, significa:
 > Dois componentes são conascentes se uma alteração em um deles exigir que o outro seja
 > modificado para manter a correção geral do sistema
 
-
 E quando se diz: *Dois componentes são conascentes ...* podemos pensar em componentes
 como classes, pacotes e até mesmo (micros)serviços diferentes. Existem dois tipos de Conascência: *Conascência Estática* e *Conascência Dinâmica*.
 
 ### Conascência Estática
-A Conascência Estática refere-se ao acoplamento no nivél do código-fonte. Coisas que são percebidas
-no momento da escrita/leitura do código.
+A Conascência Estática refere-se ao acoplamento no nivél do código-fonte. Coisas que são percebidas no momento da escrita/leitura do código.
 
 Aqui temos 5 subtipos:
-
 
 **Conascência de nome (CoN)** - Vários componentes devem concordar com o nome de uma entidade.
   - Por exemplo o nome dos métodos, que representa a forma mais comum de acoplamento entre uma definição e uma chamada
@@ -96,8 +92,12 @@ final Response responseBB = buscarDadosRelatorio("email@gmail.com", "1B");
 ambos devem produzir resultados idênticos. Obviamente isso demonstra um alto grau de acoplamento, pois se em 
 uma das parte mudar algum detalhe, a funcionalidade não irá funcionar corretamente.
 
-Como disse parece coisas obvias, pequenas, mas que acontece bastante. A medida que a base de código e
+Como disse parece coisas óbvias, pequenas, mas que acontece bastante. A medida que a base de código e
 a quantidade de desenvolvedores aumenta, a *Conascência* acaba aparecendo com certa frequência.
 
 Em um próximo post, continuarei falando da *Conascência Dinâmica*, que por sua natureza ser algo que 
 acontece apenas em *tempo de execução* é muito mais dificil de se perceber.
+
+Links:
+[Fundamentals of Software Architecture](https://fundamentalsofsoftwarearchitecture.com)
+[Connascence](https://connascence.io)
