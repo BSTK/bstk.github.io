@@ -29,12 +29,13 @@ A Conascência Estática refere-se ao acoplamento no nivél do código-fonte. Co
 Aqui temos 5 subtipos:
 
 **Conascência de nome (CoN)** - Vários componentes devem concordar com o nome de uma entidade.
-  - Por exemplo o nome dos métodos, que representa a forma mais comum de acoplamento entre uma definição e uma chamada
+  - Por exemplo o nome dos métodos, que representa a forma mais comum de acoplamento entre uma definição e uma chamada: 
+se o nome de um método mudar, os chamadores desse método deverão ser alterados para usar o novo nome. 
 
 
 **Conascência de tipo (CoT)** - Vários componentes devem concordar com o tipo de uma entidade
-  - Aqui podemos dizer sobre o recurso comum em linguagens estaticamente tipadas de limitar
-variaveis e parâmetros a tipos especificos.
+  - Aqui podemos dizer sobre o recurso comum em linguagens estaticamente tipadas de limitar variaveis e parâmetros a tipos especificos, facilmente detectado 
+pelo compilador. Em linguagens dinamicas como Python, Javascript é algo mais difícil de se perceber.
 
 
 **Conascência de Significado (CoS) ou Connascence de Convenção (CoC)** - Vários componentes devem concordar com o
@@ -69,7 +70,7 @@ int TRUE = 1;
 {% endhighlight %}
 
   > Aqui uma forma que vejo para se corrigir a CoS/CoC, ter um bom funcionamento e um código fácil de manter, seria o uso de constantes. No Java temos os ```Enums``` que ajudam muito nos casos
-envolvendo tipos, números mágicos e etc. Também temos a opção da queria ```ConstantsUtil``` (essa aqui todo projeto você acaba encontrando)
+envolvendo tipos, números mágicos e etc. Também temos a opção da querida ```ConstantsUtil``` (essa aqui todo projeto você acaba encontrando)
 
 
 **Conascência de posição (CoP)** - Vários componentes devem concordar com a ordem dos valores.
