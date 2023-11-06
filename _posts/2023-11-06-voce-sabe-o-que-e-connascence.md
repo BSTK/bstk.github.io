@@ -33,7 +33,7 @@ a última linha do bloco de código. Esse tipo de erro não é pego pelo compila
 só aparece em tempo de execução.
 Não gostei muito do exemplo pois o ```design``` do código não ficou legal, talvez isso tenha levado ao erro. No caso o bjeto ```email```
 não deveria ter a responsabilidade de ```enviar o email```, algo que pra mim não faz sentido. Ta certo que é um exemplo, mas
-em código real já vi muita coisa parecida e você concerteza também.
+em código real já vi muita coisa parecida e você com certeza também.
 
 
 Creio que ficaria assim melhor:
@@ -50,18 +50,24 @@ emailService.send(email);
 Dessa forma ajuda a evitar esse tipo problema pois é delegado a outro objeto a a responsabilidade de envio. Claro que não extingue a possibilidade
 da *CoE* existir mas ajuda.
 
-
   
-**Conascência de tempo (CoT)** - Texto Aqui
-- Texto Aqui
+**Conascência de tempo (CoT)** - O momento da execução de vários componentes é importante.
+- O exemplo citado no livro é o caso comum envolvendo ```race condition``` onde dois threads executados ao mesmo tempo
+afeta o resultado da operação em conjunta.
 
 
-**Conascência de valores (CoV)** - Texto Aqui
-- Texto Aqui
+**Conascência de valores (CoV)** - Ocorre quando vários valores se relacionam entre si e precisam ser alterados em conjunto.
+- Imagine que ao realizar certa tarefa, digamos alterar um ```status``` de uma entidade, temos que fazer isso em diversos lugares como
+diferentes banco de dados. Essa operação só será concluida com sucesso se os diferentes lugares forem alterados em conjunto para manter a
+integridade dos dados caso contrário gerando uma incosistência. Exemplos como esse são comuns quando envolve transações envolvendo sistemas 
+distribuídos.
 
 
-**Conascência da identidade (CoI)** - Texto Aqui
-- Texto Aqui
+**Conascência da identidade (CoI)** - Ocorre quando vários componentes precisam fazer referência a mesma entidade.
+- Um exemplo comum da CoI acontece quando dois componentes/serviços independentes precisam compartilhar e atualizar uma estrutura de dados
+em comum como uma fila ou um cache distribuído.
+
+
 
 Links:
 - [Fundamentals of Software Architecture](https://fundamentalsofsoftwarearchitecture.com)
