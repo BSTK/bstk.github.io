@@ -32,11 +32,11 @@ numa certa ordem para o bom funcionamento. O erro ocorre especificamente na linh
 a última linha do bloco de código. Esse tipo de erro não é pego pelo compilador (em linguagens compiladas) e 
 só aparece em tempo de execução.
 Não gostei muito do exemplo pois o ```design``` do código não ficou legal, talvez isso tenha levado ao erro. No caso o bjeto ```email```
-não deveria ter a responsabilidade de ```enviar o email``` é algo que pra mim não faz sentido. Ta certo que é um exemplo, mas
+não deveria ter a responsabilidade de ```enviar o email```, algo que pra mim não faz sentido. Ta certo que é um exemplo, mas
 em código real já vi muita coisa parecida e você concerteza também.
 
 
-Creio que ficaria melhor assim:
+Creio que ficaria assim melhor:
 {% highlight java %}
 final Email email = new Email();
 email.setRecipient("foo@example.com");
@@ -47,8 +47,8 @@ email.setSubject("Subject Batata");
 emailService.send(email);
 {% endhighlight %}
 
-Creio que dessa forma ajuda a evitar esse tipo problema pois é delegado a outro objeto a a responsabilidade de envio. Claro que não extingue a possibilidade
-da *CoE* mas ajuda.
+Dessa forma ajuda a evitar esse tipo problema pois é delegado a outro objeto a a responsabilidade de envio. Claro que não extingue a possibilidade
+da *CoE* existir mas ajuda.
 
 
   
