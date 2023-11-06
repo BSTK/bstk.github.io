@@ -8,7 +8,7 @@ Estou lendo o livro **Fundamentals of Software Architecture: An Engineering Appr
 capitulo é mostrado o conceito de **Connascence**. Venha ver o que descobri.
 
 Esse é o segundo post abordando a **Connascence**. Então caso não tenha lido a primeira parte, sugiro dar uma passada lá e conferir o conteúdo. 
-- [Connascence, uma métrica óbvia mas nem tanto Pt1](https://fundamentalsofsoftwarearchitecture.com)
+- [Connascence, uma métrica óbvia mas nem tanto Pt1](http://brunoluz.com.br/2023/11/02/voce-sabe-o-que-e-connascence)
 
 ## CONTEÚDO DO POST PARTE 2
 
