@@ -67,6 +67,18 @@ distribuídos.
 - Um exemplo comum da CoI acontece quando dois componentes/serviços independentes precisam compartilhar e atualizar uma estrutura de dados
 em comum como uma fila ou um cache distribuído.
 
+Além dos tipos e subtipos, temos as propriedades da *Conascência*.
+
+### Propriedades da Conascência
+
+**Força** - Ocorre
+- aaaa
+
+**Localidade/Localização** - Ocorre
+- aaaa
+
+**Grau** - Ocorre
+- aaaa
 
 
 Links:
