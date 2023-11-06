@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Connascence, uma métrica óbvia mas nem tanto Pt1
-categories: [Java, Arquitetura de Software, Boas Práticas]
 ---
 
 A leitura sempre mostra coisas que nem sabemos que existe, simplesmente pelo fato de nunca ter ouvido falar ou ler sobre, mas que estavam lá só esperando para serem descobertas.
