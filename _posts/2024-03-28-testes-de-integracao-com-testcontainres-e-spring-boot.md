@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Testes de integração com TestContainrs e Spring Boot
+title: Testes de integração com Testcontainers e Spring Boot
 ---
 
 Eu sempre gostei de fazer testes em meus projetos, principalmente testes unitários que além ser um boa prática quando estamos escrevendo software é também uma forma de garantir a qualidade. De toda forma somente testes unitários não são suficientes, então foi preciso buscar outras formas de testar a aplicação, dai comecei a olhar para os testes de integração.
 
 A bola da vez está sendo aprender e mexer com **TestContainres** e a forma como ela ajuda e muito na hora de lidar com as **dependências externas**, sejam elas banco de dados, messages brokers, serviços de cache ou qualquer outra coisa que possa subir num container Docker.
 
-### O que é TestContainrs
+### O que é Testcontainers
 
 Aqui eu deixo a definição do próprio site deles
 > Testcontaines é um framework código aberto para fornecer instâncias leves e descartáveis ​​de bancos de dados, corretores de mensagens, navegadores da web ou praticamente qualquer coisa que possa ser executada em um contêiner Docker.
