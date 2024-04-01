@@ -66,7 +66,7 @@ No ```pom.xml``` além das dependencias principais para que a api funcione (Spri
 O endpoint que vamos testar é bem simples: ele recebe uma request, valida alguns dados obrigatórios e insere uma nova conta bancaria. Temos também uma validação para que não permita cadastrar uma conta que já exista.
 
 ```json
-POST http://localhost:8080/v1/api/contas-bancarias
+POST /v1/api/contas-bancarias
 {
   "nome": "Conta Nubank",
   "agencia": "9922",
