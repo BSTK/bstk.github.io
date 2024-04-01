@@ -7,7 +7,7 @@ Eu sempre gostei de fazer testes em meus projetos, principalmente testes unitár
 
 A bola da vez está sendo aprender e mexer com **TestContainers** e a forma como ele ajuda e muito na hora de lidar com as **dependências externas**, sejam elas banco de dados, messages brokers, serviços de cache ou qualquer outra coisa que possa subir num container Docker.
 
-[![image_title](image_link)](image_link)
+[![Capa post](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/capa-post-test-containers-01.png?raw=true)](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/capa-post-test-containers-01.png?raw=true)
 
 ### O que é Testcontainers
 
