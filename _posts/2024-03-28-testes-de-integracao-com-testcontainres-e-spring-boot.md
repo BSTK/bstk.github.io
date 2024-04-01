@@ -5,7 +5,9 @@ title: Testes de integração com Testcontainers e Spring Boot
 
 Eu sempre gostei de fazer testes em meus projetos, principalmente testes unitários que além ser uma boa prática quando estamos escrevendo software é também uma forma de garantir a qualidade. De toda forma somente testes unitários não são suficientes, então foi preciso buscar outras formas de testar a aplicação, dai comecei a olhar para os testes de integração.
 
-A bola da vez está sendo aprender e mexer com **TestContainers** e a forma como ela ajuda e muito na hora de lidar com as **dependências externas**, sejam elas banco de dados, messages brokers, serviços de cache ou qualquer outra coisa que possa subir num container Docker.
+A bola da vez está sendo aprender e mexer com **TestContainers** e a forma como ele ajuda e muito na hora de lidar com as **dependências externas**, sejam elas banco de dados, messages brokers, serviços de cache ou qualquer outra coisa que possa subir num container Docker.
+
+[![image_title](image_link)](image_link)
 
 ### O que é Testcontainers
 
