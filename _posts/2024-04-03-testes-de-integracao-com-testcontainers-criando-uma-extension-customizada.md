@@ -9,7 +9,7 @@ Continuando a explorar os *Testes de Integração com TestContainer e Spring Boo
 do JUnit personalizada para resolver um problema que estava acontecendo ao executar mais de uma classe de teste.
 
 Bom, esse é o segundo post sobre testes de integração e caso não tenha lido o primeiro, de uma olhada onde explico como iniciei e como cheguei até aqui.
-Estou usando o mesmo projeto do post anterior, então caso queira acompanhar e seguir a linha de raciocinio é interessante dar uma lida antes de iniciar esse aqui.
+Estou usando o mesmo projeto do post anterior, então caso queira acompanhar e seguir a linha de raciocínio é interessante dar uma lida antes de iniciar esse aqui.
 
 > - [ Github: Projeto TestContainers com Spring Boot ](https://github.com/BSTK/okk-blog-posts/tree/main/okk-testcontainers-com-springboot)
 
@@ -254,7 +254,7 @@ Pronto, podemos executar cada uma delas que tudo continuará funcionando numa bo
 
 ## Deu ruim. Está quebrando tudo.
 
-Se você executar as duas ```classes de teste, uma de cada vez``` vai funcionar perfeitamente. O problema ocorre quando você tenta executar todas as classes de teste de uma só vez. Isso você consegue na IDE (IntelliJ) clicando no pacote os estão seus testes ( que no nosso caso é ```dev.bstk.testcontainerscomspringboot.api```) e pedindo para rodar todos:
+Se você executar as duas classes de teste, ```uma de cada vez``` vai funcionar perfeitamente. O problema ocorre quando você tenta executar todas as classes de teste de ```uma só vez```. Isso você consegue na IDE (IntelliJ) clicando no pacote os estão seus testes ( que no nosso caso é ```dev.bstk.testcontainerscomspringboot.api```) e pedindo para rodar todos:
 
 [![POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES.png?raw=true)](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES.png?raw=true)
 
