@@ -76,15 +76,12 @@ class ContaBancariaResourceAtualizarContaITTest {
   void setUp() {
     contaBancariaRepository.deleteAll();
   }
-
 }
-
 ```
 
 Perceba que é o mesmo código da classe de teste anteiror. Pronto, agora é hora de criarmos o caso de teste. Ele ficou dessa forma:
 
 ```java
-
 @Test
   @DisplayName("Deve atualizar dados da conta bancária")
   void t1() {
@@ -152,10 +149,10 @@ Perceba que é o mesmo código da classe de teste anteiror. Pronto, agora é hor
         Assertions.assertThat(contaBancariaComDadosAtualizadosRequest.getObservacao()).isEqualTo(resultado.getObservacao());
       });
 }
-
 ```
 
 - Na sessão de ```ARANGE```, estou criando uma nova conta e inserindo no banco, afinal o banco de dados está zerado. Também estou criando a ```urlRequest``` e aproveitando o ```Id``` da conta recém cadastrada. Crio também a ```request``` com os novos dados, ou seja, os dados que vou atualizar. Nesse exemplo ficou assim:
+
 ```java
 /// CONTA INICIAL
 ContaBancaria.builder()
@@ -176,7 +173,6 @@ ContaBancariaRequest.builder()
   .gerente("Maria Pereira")
   .observacao("Conta despezas da casa")
   .build();
-
 ```
 
 - Na sessão ```ACTION```, faço a requisição usando o ```RestAssured```, mas dessa vem enviando um ```PUT```.
@@ -187,7 +183,6 @@ ContaBancariaRequest.builder()
   - Segundo: Verifico se tem apenas uma conta, afinal foi uma atualização e não um novo cadastro
   - Terceiro: Agora verifico se a conta que está no banco os dados iguais aos novos que pedi para atualizar
 
-
 Pronto, rodando todos os testes, os dois irão executar, subuir container, fazer inserts, select, updates e tudo funcionando.
 
 ## Código duplicado não dá. É preciso refatorar.
@@ -197,7 +192,6 @@ Neste ponto, estamos com praticamente duas classes de testes idênticas e todo c
 Crie uma nova classe no pacote raiz dos teste, e nomeie ```AppTestContainer```. Essa classe será responsavél por conter todo código de configuração, seu conteúdo ficou assim:
 
 ```java
-
 /// IMPORTS
 
 @Testcontainers
@@ -231,12 +225,12 @@ public class AppTestContainer {
     POSTGRESQL_DB.stop();
   }
 }
-
 ```
 
 Agora podemos usar nas duas classes de testes, removendo assim o código duplicado:
 
 - ```ContaBancariaResourceAtualizarContaITTest```
+
 ```java
 /// IMPORTS
 
@@ -247,8 +241,8 @@ class ContaBancariaResourceAtualizarContaITTest extends AppTestContainer {
 }
 ```
 
-
 - ```ContaBancariaResourceITTest```
+
 ```java
 /// IMPORTS
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
