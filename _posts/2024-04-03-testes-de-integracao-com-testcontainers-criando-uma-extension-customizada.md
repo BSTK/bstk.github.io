@@ -262,7 +262,7 @@ Vai ocorrer o seguinte erro:
 
 [![POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST-TEST-CONTEINER-II-TESTE-FALHANDO.png?raw=true)](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/ POST-TEST-CONTEINER-II-TESTE-FALHANDO.png?raw=true)
 
-Isso está acontecendo porque quando é executando a primeira classe de teste, o TestContainer sobe ```UM CONTAINER DO POSTGRESQL```, ai quando todos os casos de testes dessa primeira classe finalizar, ele tenta ```PARAR O CONTAINER DO POSTGRESQL```. Até ai ok, mas isso vai se repetir quando for executar os casos de teste da segunda classe de teste, assim, ele tenta mais uma vez subir um novo container mas o primeiro ainda não foi finalizado totalmente, assim não conseguindo subir um novo container.
+Isso está acontecendo porque quando é executado a primeira classe de teste, o TestContainer sobe ```UM CONTAINER DO POSTGRESQL```, ai quando todos os casos de testes dessa primeira classe finalizar, ele tenta ```PARAR O CONTAINER DO POSTGRESQL```. Até ai ok, mas isso vai se repetir quando for executar os casos de teste da segunda classe de teste, assim, ele tenta mais uma vez subir um novo container mas o primeiro ainda não foi finalizado totalmente, assim não conseguindo subir um novo container.
 
 É meio confuso, então vamos tentar visualizar:
 
@@ -312,10 +312,16 @@ Você já deve ter usando uma, algo como:
 @ExtendWith(MockitoExtension.class)
 ```
 
-Pois bem, vamos criar a nossa, chamando de ```AppTestExtension``` e usaremos dessa forma:
+Pois bem, vamos criar a nossa, chamando de ```AppTestExtension``` e usaremos ela na nossa classe de configuração, ficando dessa forma:
+
 ```java
-@ExtendWith(AppTestExtension.class)
+@Testcontainers
+@ExtendWith(AppTestExtension.class) /// NOSSA EXTENSÃO CUSTOMIZADA!!
+public abstract class AppTestContainer {
+  ...
+}
 ```
+
 
 Nossa extensão ficou assim:
 
