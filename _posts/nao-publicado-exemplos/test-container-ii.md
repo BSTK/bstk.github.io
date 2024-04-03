@@ -264,11 +264,11 @@ Pronto, podemos executar cada uma delas que tudo continuará funcionando numa bo
 
 Se você executar as duas ```classes de teste, uma de cada vez``` vai funcionar perfeitamente. O problema ocorre quando você tenta executar todas as classes de teste de uma só vez. Isso você consegue na IDE (IntelliJ) clicando no pacote os estão seus testes ( que no nosso caso é ```dev.bstk.testcontainerscomspringboot.api```) e pedindo para rodar todos:
 
----- IMAGEM POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES
+[![POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES.png?raw=true)](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES.png?raw=true)
 
 Vai ocorrer o seguinte erro:
 
----- IMAGEM POST-TEST-CONTEINER-II-TESTE-FALHANDO
+[![POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST-TEST-CONTEINER-II-TESTE-FALHANDO.png?raw=true)](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/ POST-TEST-CONTEINER-II-TESTE-FALHANDO.png?raw=true)
 
 Isso está acontecendo porque quando é executando a primeira classe de teste, o TestContainer sobe ```UM CONTAINER DO POSTGRESQL```, ai quando todos os casos de testes dessa primeira classe finalizar, ele tenta ```PARAR O CONTAINER DO POSTGRESQL```. Até ai OK, mas isso vai se repetir quando for executar os casos de teste da segunda classe de teste, assim, ele tenta mais uma vez subir um novo container mas o primeiro ainda não foi finalizado totalmente, assim não conseguindo subir um novo container.
 
@@ -402,6 +402,9 @@ testcontainers.reuse.enable=true
 ```
 
 Pronto, agora executando todos os teste, eles voltam a funcionar direitinho, e agora só com um container para todos os testes.
+
+[![POST-TEST-CONTEINER-II-EXECUTANDO-TODO-OS-TESTES](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST-TEST-CONTEINER-II-TESTE-FUNCIONANDO.png?raw=true)](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST-TEST-CONTEINER-II-TESTE-FUNCIONANDO.png?raw=true)
+
 Procure o log da IDE as marcações que deixamos e veja que só será executado apenas uma vez!
 
 ```java
