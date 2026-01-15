@@ -41,6 +41,8 @@ Depois de limpar e formatar os três notebooks, o hardware inicial do meu *homel
 - SSD: Kingston SUV500480G 480 GB  
 - Processador: Intel® Core™ i5-5200U @ 2.20 GHz  
 
-Bom é isso ai, espero que tenha curtido e até o próximo post.
+No próximo post, falarei do rack, que também foi feito a mão com maderias de resto de construção. Rústico, funcional! Também listar os materiais comprados até agora e como ficou todos os equipamentos juntos.
 
-#### Este texto foi totalmente escrito a mão. Revisado por IA (ChatGPT) apenas para correção de erros de Português
+Até a próxima!
+
+```Este texto foi totalmente escrito a mão. Revisado por IA (ChatGPT) apenas para correção de erros de Português```
