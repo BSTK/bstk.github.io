@@ -45,4 +45,4 @@ No próximo post, falarei do rack, que também foi feito a mão com maderias de 
 
 Até a próxima!
 
-```Este texto foi totalmente escrito a mão. Revisado por IA (ChatGPT) apenas para correção de erros de Português```
+*Este texto foi totalmente escrito a mão. Revisado por IA (ChatGPT) apenas para correção de erros de Português*
