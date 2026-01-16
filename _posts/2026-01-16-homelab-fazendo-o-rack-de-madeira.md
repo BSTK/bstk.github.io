@@ -5,7 +5,7 @@ title: Homelab - Fazendo o rack de madeira
 
 No meu primeiro post, apresentei a ideia de ter um Homelab utilizando alguns notebooks usados que estavam encostados em algum canto. Então, para empilhar esses notebooks, nada melhor do que construir o próprio rack.
 
-Ao contrário dos modelos que vi o pessoal fazendo na web — com impressora 3D ou até mesmo aqueles mini racks vendidos em lojas especializadas —, decidi fazer o meu de madeira, mais precisamente utilizando sobras de materiais de construção que estavam jogadas na garagem.
+Ao contrário dos modelos que vi o pessoal fazendo na web com impressora 3D ou até mesmo aqueles mini racks vendidos em lojas especializadas, decidi fazer o meu de madeira, mais precisamente utilizando sobras de materiais de construção que estavam jogadas na garagem.
 
 [![Madeiras](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST_HOMELAB_002_IMAGEM_DAS_MADEIRAS_BRUTAS.jpeg?raw=true)](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST_HOMELAB_002_IMAGEM_DAS_MADEIRAS_BRUTAS.jpeg?raw=true)
 
@@ -48,7 +48,7 @@ Os materiais foram:
 - 1 tomada fêmea
 - Fita isolante
 
-*Abraçadeiras*: aqui eu perdi uma grana, bicho. Paguei R$ 45,00 em um pacote com 100 unidades e depois vi em outra loja pelo preço de R$ 8,00. Empolgação é fogo 😅.
+**Abraçadeiras**: Aqui eu perdi uma grana, bicho. Paguei R$ 45,00 em um pacote com 100 unidades e depois vi em outra loja pelo preço de R$ 8,00. Empolgação é fogo 😅.
 
 ## Não Fiz, Mas Queria Ter Feito
 
