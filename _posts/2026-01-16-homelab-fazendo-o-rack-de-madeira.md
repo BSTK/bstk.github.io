@@ -48,7 +48,7 @@ Os materiais foram:
 - 1 tomada fêmea
 - Fita isolante
 
-**Abraçadeiras**: Aqui eu perdi uma grana, bicho. Paguei R$ 45,00 em um pacote com 100 unidades e depois vi em outra loja pelo preço de R$ 8,00. Empolgação é fogo 😅.
+**Abraçadeiras**: Aqui eu perdi uma grana, bicho. Paguei R$ 45,00 contos em um pacote com 100 unidades e depois vi em outra loja pelo preço de R$ 8,00. Empolgação é fogo 😅.
 
 ## Não Fiz, Mas Queria Ter Feito
 
