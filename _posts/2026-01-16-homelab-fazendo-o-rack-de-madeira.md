@@ -19,7 +19,7 @@ Aí é aquela coisa, né? Tudo começa com alguns rabiscos no papel: tirar medid
 
 [![Madeiras](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST_HOMELAB_002_IMAGEM_MADEIRAS_CORTADAS.jpeg?raw=true)](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST_HOMELAB_002_IMAGEM_MADEIRAS_CORTADAS.jpeg?raw=true)
 
-## O Rack Nasceu! É Menino!
+## O Rack nasceu! É Menino!
 
 A princípio, eu queria um móvel apenas para acomodar os notebooks, de forma que ficassem empilhados. Porém, como também precisava organizar alguns livros e cadernos que estavam espalhados, encontrar um local adequado para o roteador e reduzir a quantidade de tralhas sobre a mesa, a solução foi criar algo além de um rack simples.
 
@@ -32,7 +32,7 @@ Aqui está o resultado final, já no lugar certo e com tudo organizado:
 [![Madeiras](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST_HOMELAB_002_IMAGEM_RACK_ORGANIZADO_FRENTE.jpeg?raw=true)](https://github.com/BSTK/bstk.github.io/blob/master/assets/image/POST_HOMELAB_002_IMAGEM_RACK_ORGANIZADO_FRENTE.jpeg?raw=true)
 
 
-## O Que Comprei Até Agora?
+## O que comprei até agora?
 
 No primeiro post, mencionei que gastei aproximadamente R$ 120,00, e foi bem por aí mesmo. Não vou listar o preço de cada item porque acabei perdendo as notas, mas são coisas baratas do dia a dia, compradas em lojas de material de construção e elétrica.
 
@@ -48,9 +48,9 @@ Os materiais foram:
 - 1 tomada fêmea
 - Fita isolante
 
-**Abraçadeiras**: Aqui eu perdi uma grana, bicho. Paguei R$ 45,00 contos em um pacote com 100 unidades e depois vi em outra loja pelo preço de R$ 8,00. Empolgação é fogo 😅.
+**Abraçadeiras**: Aqui eu perdi uma grana, bicho. Paguei 45,00 conto em um pacote com 100 unidades e depois vi em outra loja 8,00 conto. Empolgação é fogo 😅.
 
-## Não Fiz, Mas Queria Ter Feito
+## Não Fiz, mas queria qer feito
 
 Eu queria ter crimpado os cabos de rede com conectores RJ45 e tudo mais. Só que isso acabaria saindo mais caro, já que eu teria de comprar o alicate específico e um testador de cabos para garantir que tudo estivesse funcionando corretamente.
 
